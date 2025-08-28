@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ideazite | Todas las campañas presentadas en los principales festivales de creatividad, publicidad y marketing del mundo</title>
+  <meta name="description" content="Explora entries, shortlists, agencias y ganadores de Cannes Lions, Eurobest, Spikes Asia, Dubai Lynx, Effie Awards Latin America, FIAP y muchos más. Boards, videos y descargas CSV.">
+  <link rel="canonical" href="https://ideazite.com/">
+  <link rel="icon" href="/icons/favicon.ico" type="image/x-icon">
+  <meta name="keywords" content="Cannes Lions, Eurobest, Spikes Asia, Dubai Lynx, FIAP, Effie, entries, shortlists, ganadores, categorías, campañas, awards, publicidad, marketing, ideas, premios, creatividad, CSV, base de datos">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ideazite | Campañas y ganadores de todos los festivales creativos">
+  <meta property="og:description" content="Entries, shortlists, agencias y ganadores de Cannes Lions, Eurobest, Spikes Asia, Dubai Lynx, Effie, FIAP y muchos más. Campañas con boards y CSV.">
+  <meta property="og:url" content="https://ideazite.com/">
+  <meta property="og:image" content="https://ideazite.com/icons/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Preload header desktop -->
+  <link rel="preload" as="image" href="/icons/ideazite-header-desktop.png" media="(min-width: 768px)">
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WBBBSGK7YX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WBBBSGK7YX');
+  </script>
+
+  <style>
+    :root{
+      --cannes:#1f7a3d;
+      --spikes:#0a2a3f;
+      --eurobest:#d62828;
+      --dubai:#b99a00;
+      --fiap:#ff7f0e;
+      --bg:#ffffff;
+      --text:#1a1a1a;
+      --muted:#666;
+      --line:#e5e5e5;
+      --shadow:0 4px 12px rgba(0,0,0,0.08);
+      --radius:8px;
+      --gap:16px;
+      --maxw:1000px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    header {
+      max-width: var(--maxw);
+      margin: 32px auto 8px;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .logo {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    main{
+      max-width: var(--maxw);
+      margin: 16px auto 40px;
+      padding: 0 20px 20px;
+    }
+
+    h1{
+      font-size: 28px;
+      margin: 18px 0 8px;
+      line-height: 1.2;
+    }
+    .intro{
+      color: var(--muted);
+      font-size: 16px;
+      margin: 0 0 12px;
+    }
+
+    section.year{
+      margin: 28px 0 8px;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+    section.year h2{
+      font-size: 20px;
+      margin: 0 0 12px;
+    }
+
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--gap);
+    }
+
+    .button{
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+      padding: 12px 16px;
+      border-radius: 6px;
+      border: 2px solid transparent;
+      transition: transform 0.08s ease, background-color 0.2s ease, border-color 0.2s ease;
+      box-shadow: var(--shadow);
+      position: relative;
+      user-select: none;
+    }
+    .button:active{ transform: translateY(1px); }
+
+    .inactive{
+      pointer-events: none;
+      opacity: 1;
+      background-color: #e0e0e0 !important;
+      border-color: #cccccc !important;
+      color: #888 !important;
+    }
+    .inactive::after{
+      content: "Coming soon";
+      position: absolute;
+      bottom: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      pointer-events: none;
+    }
+    .inactive:hover::after{ opacity: 1; }
+
+    .cannes{ background: var(--cannes); border-color: var(--cannes); }
+    .cannes:hover{ background: #2fa159; border-color: #2fa159; }
+
+    .spikes{ background: var(--spikes); border-color: var(--spikes); }
+    .spikes:hover{ background: #104561; border-color: #104561; }
+
+    .eurobest{ background: var(--eurobest); border-color: var(--eurobest); }
+    .eurobest:hover{ background: #e63946; border-color: #e63946; }
+
+    .dubai{ background: var(--dubai); border-color: var(--dubai); }
+    .dubai:hover{ background: #d4af37; border-color: #d4af37; }
+
+    .fiap{ background: var(--fiap); border-color: var(--fiap); }
+    .fiap:hover{ background: #ff9933; border-color: #ff9933; }
+
+    footer{
+      max-width: var(--maxw);
+      margin: 20px auto 40px;
+      padding: 0 20px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (min-width: 1100px){
+      h1{ font-size: 30px; }
+    }
+  </style>
+
+  <!-- JSON-LD: WebSite + CollectionPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Ideazite",
+        "url": "https://ideazite.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://ideazite.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "CollectionPage",
+        "name": "Bases de datos de festivales de creatividad, publicidad y marketing",
+        "description": "Entries, shortlists, agencias y ganadores de Cannes Lions, Eurobest, Spikes Asia, Dubai Lynx, effie, FIAP y otros, con videos, boards y descargas CSV.",
+        "url": "https://ideazite.com/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: ItemList por año -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ItemList",
+        "name": "Festivales 2025",
+        "itemListOrder": "Ascending",
+        "numberOfItems": 4,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "name": "Cannes Lions 2025", "url": "https://ideazite.com/awards/canneslions/2025/" } },
+          { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "name": "Spikes Asia 2025", "url": "https://ideazite.com/awards/spikes_asia/2025/" } },
+          { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "name": "Dubai Lynx 2025", "url": "https://ideazite.com/awards/dubai_lynx/2025/" } },
+          { "@type": "ListItem", "position": 4, "item": { "@type": "WebPage", "name": "FIAP 2025", "url": "https://ideazite.com/awards/fiap/2025/" } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <picture>
+      <source srcset="/icons/ideazite-header-desktop.png" media="(min-width: 768px)">
+      <img
+        src="/icons/ideazite-header-mobile.png"
+        alt="Ideazite, la mayor base de datos de los festivales de creatividad, publicidad y marketing"
+        class="logo"
+        width="1200" height="400"
+        sizes="(min-width: 768px) 100vw, 100vw"
+        fetchpriority="high">
+    </picture>
+  </header>
+
+  <main>
+    <h1>Campañas, entries, shortlists y ganadores de los principales festivales de publicidad, marketing y creatividad del mundo</h1>
+    <p class="intro">
+      En Ideazite se puede consultar toda la infomación de festivales como Cannes Lions, Eurobest, Spikes Asia, Dubai Lynx, Effie Awards Latin America, Epica Awards, Business of Design Week, Asian Academy Creative Awards, Summit Awards, Pentawards, Pixel Awards, Guardian Advertising Awards, Young Ones Student Awards, FIAP y muchos más.
+      Cobertura por año, con videos, image boards y descargas CSV.
+    </p>
+
+    <!-- 2025 -->
+    <section class="year" aria-label="Festivales 2025">
+      <h2>Festivales 2025</h2>
+      <div class="grid">
+        <span class="button eurobest inactive" aria-disabled="true" title="Coming soon">Eurobest 2025</span>
+        <a href="/awards/canneslions/2025/" class="button cannes">Cannes Lions 2025</a>
+        <a href="/awards/spikes_asia/2025/" class="button spikes">Spikes Asia 2025</a>
+        <a href="/awards/dubai_lynx/2025/" class="button dubai">Dubai Lynx 2025</a>
+        <a href="/awards/fiap/2025/" class="button fiap">FIAP 2025</a>
+      </div>
+    </section>
+
+    <!-- 2024 -->
+    <section class="year" aria-label="Festivales 2024">
+      <h2>Festivales 2024</h2>
+      <div class="grid">
+        <a href="/awards/eurobest/2024/" class="button eurobest">Eurobest 2024</a>
+        <a href="/awards/canneslions/2024/" class="button cannes">Cannes Lions 2024</a>
+        <a href="/awards/spikes_asia/2024/" class="button spikes">Spikes Asia 2024</a>
+        <a href="/awards/dubai_lynx/2024/" class="button dubai">Dubai Lynx 2024</a>
+      </div>
+    </section>
+
+    <!-- 2023 -->
+    <section class="year" aria-label="Festivales 2023">
+      <h2>Festivales 2023</h2>
+      <div class="grid">
+        <a href="/awards/eurobest/2023/" class="button eurobest">Eurobest 2023</a>
+        <a href="/awards/canneslions/2023/" class="button cannes">Cannes Lions 2023</a>
+        <a href="/awards/spikes_asia/2023/" class="button spikes">Spikes Asia 2023</a>
+        <a href="/awards/dubai_lynx/2023/" class="button dubai">Dubai Lynx 2023</a>
+      </div>
+    </section>
+
+    <!-- 2022 -->
+    <section class="year" aria-label="Festivales 2022">
+      <h2>Festivales 2022</h2>
+      <div class="grid">
+        <a href="/awards/eurobest/2022/" class="button eurobest">Eurobest 2022</a>
+        <a href="/awards/canneslions/2022/" class="button cannes">Cannes Lions 2022</a>
+        <a href="/awards/spikes_asia/2022/" class="button spikes">Spikes Asia 2022</a>
+        <a href="/awards/dubai_lynx/2022/" class="button dubai">Dubai Lynx 2022</a>
+      </div>
+    </section>
+
+    <!-- 2021 -->
+    <section class="year" aria-label="Festivales 2021">
+      <h2>Festivales 2021</h2>
+      <div class="grid">
+        <a href="/awards/eurobest/2021/" class="button eurobest">Eurobest 2021</a>
+        <a href="/awards/canneslions/2021/" class="button cannes">Cannes Lions 2021</a>
+        <a href="/awards/spikes_asia/2021/" class="button spikes">Spikes Asia 2021</a>
+        <a href="/awards/dubai_lynx/2021/" class="button dubai">Dubai Lynx 2021</a>
+      </div>
+    </section>
+
+    <!-- 2020 -->
+    <section class="year" aria-label="Festivales 2020">
+      <h2>Festivales 2020</h2>
+      <div class="grid">
+        <a href="/awards/eurobest/2020/" class="button eurobest">Eurobest 2020</a>
+        <a href="/awards/canneslions/2020/" class="button cannes">Cannes Lions 2020</a>
+        <span class="button spikes inactive" aria-disabled="true" title="Coming soon">Spikes Asia 2020</span>
+        <a href="/awards/dubai_lynx/2020/" class="button dubai">Dubai Lynx 2020</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Ideazite. Datos de campañas con fines informativos. Marcas y festivales son propiedad de sus respectivos titulares.
+  </footer>
+</body>
+</html>

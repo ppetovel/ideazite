@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
+  <url>
+    <loc>https://ideazite.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Cannes Lions -->
+  <url><loc>https://ideazite.com/awards/canneslions/2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ideazite.com/awards/canneslions/2024</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ideazite.com/awards/canneslions/2023</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ideazite.com/awards/canneslions/2022</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ideazite.com/awards/canneslions/2021</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ideazite.com/awards/canneslions/2020</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- Eurobest -->
+  <url><loc>https://ideazite.com/awards/eurobest/2025</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ideazite.com/awards/eurobest/2024</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ideazite.com/awards/eurobest/2023</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ideazite.com/awards/eurobest/2022</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ideazite.com/awards/eurobest/2021</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ideazite.com/awards/eurobest/2020</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Spikes Asia (sin 2020) -->
+  <url><loc>https://ideazite.com/awards/spikes_asia/2025</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ideazite.com/awards/spikes_asia/2024</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ideazite.com/awards/spikes_asia/2023</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ideazite.com/awards/spikes_asia/2022</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ideazite.com/awards/spikes_asia/2021</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Dubai Lynx -->
+  <url><loc>https://ideazite.com/awards/dubai_lynx/2025</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ideazite.com/awards/dubai_lynx/2024</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ideazite.com/awards/dubai_lynx/2023</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ideazite.com/awards/dubai_lynx/2022</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ideazite.com/awards/dubai_lynx/2021</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ideazite.com/awards/dubai_lynx/2020</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+</urlset>

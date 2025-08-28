@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cannes Lions 2025 | Base de datos completa de campañas premiadas</title>
+    <meta name="description" content="Explora la base de datos Cannes Lions 2025 con 26,732 entries: campañas, agencias premiadas y boards en descarga CSV.">
+    <meta name="keywords" content="Cannes Lions 2025, agencias premiadas, campañas creativas, publicidad, marketing, awards, CSV, boards">
+
+    <!-- Open Graph (para compartir en redes) -->
+    <meta property="og:title" content="Cannes Lions 2025 | Base de datos completa de campañas premiadas">
+    <meta property="og:description" content="Explora todas las entries y descárgalas en CSV. Boards incluidos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ideazite.com/awards/canneslions/2025/">
+    <meta property="og:image" content="https://ideazite.com/icons/canneslions2025.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cannes Lions 2025 | Base de datos completa">
+    <meta name="twitter:description" content="Explora campañas, agencias y descarga CSV con boards.">
+    <meta name="twitter:image" content="https://ideazite.com/icons/canneslions2025.png">
+
+    <!-- Google tag (gtag.js) para GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WBBBSGK7YX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WBBBSGK7YX');
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #333;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #1f7a3d; /* Verde fuerte */
+            margin-top: 30px;
+        }
+        p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .intro {
+          max-width: 780px;
+          margin: 10px auto 15px;
+          line-height: 1.4;
+          font-size: 13px;   /* más chico */
+          color: #777;       /* gris claro */
+          text-align: center;
+        padding: 0 12px;   /* espacio lateral para que no quede pegado */
+        }
+
+        /* Ajustes solo en pantallas chicas */
+        @media (max-width: 600px) {
+        .intro {
+          padding: 0 16px;   /* más espacio lateral en móvil */
+          font-size: 14px;   /* un toque más legible en celular */
+          line-height: 1.5;  /* más aire */
+        }
+        }
+
+        /* --- Newsletter más compacto --- */
+        .newsletter-box {
+            background-color: #f6fff9;
+            padding: 12px 16px;
+            margin: 15px auto;
+            max-width: 420px;
+            border-radius: 8px;
+            border: 1px solid #b2d8b2;
+        }
+        .newsletter-box h2 {
+            color: #1f7a3d;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .newsletter-box p {
+            font-size: 13px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .newsletter-box input[type="email"] {
+            padding: 6px 10px;
+            width: 65%;
+            font-size: 13px;
+            border: 1px solid #b2d8b2;
+            border-radius: 4px;
+        }
+
+        .btn-download {
+            display: inline-block;
+            background-color: #1f7a3d;
+            color: white;
+            padding: 8px 16px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn-download:hover {
+            background-color: #2fa159;
+        }
+
+        /* --- Estilo tipo Excel verde --- */
+        table.dataTable {
+            border-collapse: collapse;
+            width: 95%;
+            margin: 20px auto;
+            background-color: white;
+            border: 1px solid #b2d8b2;
+        }
+        table.dataTable thead th {
+            background-color: #1f7a3d; /* Verde fuerte */
+            color: white;
+            border: 1px solid #b2d8b2;
+            padding: 8px;
+        }
+        table.dataTable tbody tr {
+            border-bottom: 1px solid #ddd;
+        }
+        table.dataTable tbody tr:nth-child(even) {
+            background-color: #f0fff4; /* Verde muy claro */
+        }
+        table.dataTable tbody tr:hover {
+            background-color: #d9f2e0; /* Hover verde pálido */
+        }
+        table.dataTable td {
+            border: 1px solid #ddd;
+            padding: 6px 10px;
+            text-align: left;
+        }
+
+        /* Botones y select de DataTables */
+        .dataTables_length select,
+        .dataTables_filter input {
+            background-color: #f0fff4 !important;
+            color: #333 !important;
+            border: 1px solid #1f7a3d !important;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        .dataTables_paginate a {
+            background-color: #f0fff4 !important;
+            color: #1f7a3d !important;
+            border: 1px solid #1f7a3d !important;
+            padding: 3px 8px;
+            margin: 2px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        .dataTables_paginate a:hover {
+            background-color: #2fa159 !important;
+            color: white !important;
+        }
+        .dataTables_paginate .current {
+            background-color: #1f7a3d !important;
+            color: white !important;
+        }
+        
+        /* Subtítulo corto debajo del H1 */
+        .sublead {
+        font-size: 14px;
+        color: #666;
+        margin: 6px 0 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Cannes Lions 2025</h1>
+    <p class="sublead">Base de datos completa: tabla + CSV</p>
+    <p class="intro">
+Esta base de datos de Cannes Lions reúne más de 26,000 inscripciones con detalles de 
+track, título, brand, agency, shortlist, nivel de premio y board. Se pueden explorar las campañas más creativas del mundo y descubrir qué agencias 
+fueron premiadas en el festival de publicidad más importante. También está la opción de descarga en CSV para un análisis profundo.
+    </p>
+
+    <div class="newsletter-box">
+        <h2>Más info en el Newsletter de<br>Pablo Petovel</h2>
+        <p>Gratis. Powered by Beehiiv.</p>
+        <form action="https://magic.beehiiv.com/v1/522e9063-6442-4cd6-927d-05200c3565bb" method="get" target="_blank">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <br>
+            <button type="submit" class="btn-download">Subscribe</button>
+        </form>
+    </div>
+
+    <a href="/awards/canneslions/2025/data/cannes2025.csv" download class="btn-download">↓ Descarga CSV</a>
+
+    <table id="cannesTable" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Track</th>
+                <th>Title</th>
+                <th>Brand</th>
+                <th>Agency</th>
+                <th>Award Level</th>
+                <th>Board Image</th>
+            </tr>
+        </thead>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            Papa.parse('/awards/canneslions/2025/data/cannes2025.csv', {
+                download: true,
+                header: true,
+                skipEmptyLines: true,
+                complete: function (results) {
+                    $('#cannesTable').DataTable({
+                        data: results.data,
+                        columns: [
+                            { data: 'Track' },
+                            { data: 'Title' },
+                            { data: 'Brand' },
+                            { data: 'Agency' },
+                            { data: 'Award Level' },
+                            {
+                                data: 'Board image',
+                                render: function (data) {
+                                    return data ? `<a href="${data}" target="_blank">View Board</a>` : '';
+                                }
+                            }
+                        ],
+                        pageLength: 100,
+                        lengthMenu: [100, 500, 1000],
+                        scrollX: true
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
