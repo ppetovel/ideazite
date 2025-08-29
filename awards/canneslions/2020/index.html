@@ -168,17 +168,8 @@
             }
         /* Encabezados */
         /* Encabezados de tabla neutros */
-        table.dataTable thead th {
-            background-color: #f2f2f2; /* gris claro de fondo */
-            color: #555;               /* gris medio */
-            font-weight: normal;       /* quita negrita */
-            border: 1px solid #ccc;
-            padding: 6px;
-            font-size: 12px;
-            }
-
-
-            /* Celdas de datos */
+        
+        /* Celdas de datos */
             table.dataTable td {
             font-size: 12px;   /* más chico */
             padding: 5px 8px;
@@ -198,15 +189,15 @@
             font-size: 12px !important;   /* antes 14px aprox */
             padding: 4px 6px !important;  /* más compacto */
             }
-       /* Encabezados de tabla neutros */
-        table.dataTable thead th {
-        background-color: #f2f2f2; /* gris claro */
-        color: #555;               /* gris medio */
-        font-weight: normal;       /* quita negrita */
-        border: 1px solid #ccc;
-        padding: 6px;
-        font-size: 12px;
-        }
+    
+            .dataTables_wrapper table.dataTable thead th {
+              background-color: #f2f2f2 !important;
+              color: #555 !important;
+              font-weight: normal !important;
+              border: 1px solid #ccc !important;
+              padding: 6px !important;
+              font-size: 12px !important;
+            }
 
 
         /* Footer simple con links a redes (gris oscuro) */
@@ -292,7 +283,7 @@ Esta base de datos reúne las inscripciones con detalles de track, titulo, brand
         </form>
     </div>
 
-        <table id="cannesTable2020" class="display" style="width:100%">
+        <table id="cannesTable2020" class="display" style="width:100%;visibility:hidden">
         <thead>
             <tr>
                 <th>Track</th>
@@ -335,6 +326,9 @@ Esta base de datos reúne las inscripciones con detalles de track, titulo, brand
                         pageLength: 100,
                         lengthMenu: [100, 500, 1000],
                         scrollX: true
+                        autoWidth: false,
+                        initComplete: function () {
+                        document.getElementById('cannesTable2020').style.visibility = 'visible';
                     });
                 }
             });
