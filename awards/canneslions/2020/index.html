@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cannes Lions 2020 | Base de datos completa de campañas premiadas</title>
     <meta name="description" content="Explora la base de datos Cannes Lions 2020: campañas, agencias, boards y descarga CSV.">
-    <meta name="keywords" content="Cannes Lions 2020, agencias premiadas, campañas creativas, publicidad, marketing, awards, CSV, boards">
+    <meta name="keywords" content="Cannes Lions 2020, agencias premiadas, shortlist, winners, lions, ganadores, campañas creativas, publicidad, marketing, awards, CSV, boards">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Cannes Lions 2020 | Base de datos completa de campañas premiadas">
-    <meta property="og:description" content="Explora todas las entries y descárgalas en CSV. Boards incluidos.">
+    <meta property="og:description" content="Explora todas las entries y descargalas en CSV. Boards incluidos.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ideazite.com/awards/canneslions/2020/">
     <meta property="og:image" content="https://ideazite.com/icons/canneslions2020.png">
@@ -52,9 +52,10 @@
             color: #555;
         }
         .sublead {
-            font-size: 14px;
-            color: #666;
-            margin: 6px 0 8px;
+            font-size: 15px;   
+            color: #333;         
+            font-weight: 600;   
+            margin: 10px 0 14px;  
         }
         .intro {
           max-width: 780px;
@@ -105,11 +106,11 @@
           background-color: #1f7a3d;
           color: white;
           padding: 8px 16px;
-          margin: 10px 0;
+          margin: 20px 0 10px;
           border: none;
           border-radius: 5px;
           font-weight: bold;
-          font-size: 14px;
+          font-size: 13px;
           cursor: pointer;
           text-decoration: none;
         }
@@ -117,20 +118,7 @@
           background-color: #2fa159;
         }
 
-        /* DataTables theme verde */
-        table.dataTable {
-          border-collapse: collapse;
-          width: 95%;
-          margin: 20px auto;
-          background-color: white;
-          border: 1px solid #b2d8b2;
-        }
-        table.dataTable thead th {
-          background-color: #1f7a3d;
-          color: white;
-          border: 1px solid #b2d8b2;
-          padding: 8px;
-        }
+                    
         table.dataTable tbody tr {
           border-bottom: 1px solid #ddd;
         }
@@ -172,19 +160,131 @@
           background-color: #1f7a3d !important;
           color: white !important;
         }
+        .nav-links { 
+            margin: 10px 0 14px; 
+            font-size: 12px;    /* antes 14px */
+            }
+            .nav-links a { margin: 0 4px; 
+            }
+        /* Encabezados */
+        /* Encabezados de tabla neutros */
+        table.dataTable thead th {
+            background-color: #f2f2f2; /* gris claro de fondo */
+            color: #555;               /* gris medio */
+            font-weight: normal;       /* quita negrita */
+            border: 1px solid #ccc;
+            padding: 6px;
+            font-size: 12px;
+            }
+
+
+            /* Celdas de datos */
+            table.dataTable td {
+            font-size: 12px;   /* más chico */
+            padding: 5px 8px;
+            line-height: 1.3;  /* más compacto */
+            }
+        /* Labels y textos de controles */
+            .dataTables_wrapper .dataTables_length label,
+            .dataTables_wrapper .dataTables_filter label,
+            .dataTables_wrapper .dataTables_info,
+            .dataTables_wrapper .dataTables_paginate {
+            font-size: 12px;
+            }
+
+        /* Inputs/selects de controles */
+            .dataTables_length select,
+            .dataTables_filter input {
+            font-size: 12px !important;   /* antes 14px aprox */
+            padding: 4px 6px !important;  /* más compacto */
+            }
+       /* Encabezados de tabla neutros */
+        table.dataTable thead th {
+        background-color: #f2f2f2; /* gris claro */
+        color: #555;               /* gris medio */
+        font-weight: normal;       /* quita negrita */
+        border: 1px solid #ccc;
+        padding: 6px;
+        font-size: 12px;
+        }
+
+
+        /* Footer simple con links a redes (gris oscuro) */
+        .site-footer {
+        margin: 28px auto 22px;
+        padding: 14px 16px;
+        max-width: 920px;
+        border-top: 1px solid #ccc;
+        color: #444;
+        font-size: 14px;
+        line-height: 1.4;
+        }
+        .site-footer .social {
+        margin-top: 8px;
+        }
+        .site-footer .social a {
+        display: inline-block;
+        margin-right: 14px;
+        text-decoration: none;
+        color: #444;
+        border-bottom: 1px dotted #444;
+        }
+        .site-footer .social a:hover {
+        color: #000;
+        border-bottom-color: #000;
+        }
+        @media (max-width: 600px) {
+        .site-footer {
+            padding: 16px;
+            font-size: 15px;
+        }
+        .site-footer .social a {
+            margin-right: 12px;
+        }
+        }
+        .nav-links {
+        margin: 16px 0;
+        font-size: 14px;
+        }
+        .nav-links a {
+        color: #444;
+        text-decoration: none;
+        margin: 0 6px;
+        }
+        .nav-links a:hover {
+        text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+        table.dataTable thead th { font-size: 11px; padding: 5px; }
+        table.dataTable td { font-size: 11px; padding: 4px 6px; }
+        .dataTables_wrapper .dataTables_length label,
+        .dataTables_wrapper .dataTables_filter label,
+        .dataTables_wrapper .dataTables_info,
+        .dataTables_wrapper .dataTables_paginate { font-size: 11px; }
+        .dataTables_length select,
+        .dataTables_filter input { font-size: 11px !important; }
+        }
+
     </style>
 </head>
 <body>
 
+    <nav class="nav-links">
+    <a href="https://ideazite.com/">Home</a> · 
+    <a href="https://ideazite.com/awards/canneslions/">Cannes Lions Awards</a>
+    </nav>
+
+
     <h1>Cannes Lions 2020</h1>
-    <p class="sublead">Base de datos completa: tabla + CSV</p>
+    <p class="sublead">Ganadores, shortlist, entries, boards y la base de datos</p>
     <p class="intro">
-Esta base de datos de Cannes Lions reúne las inscripciones del festival internacional de creatividad, con detalles de track, titulo, brand, agency, nivel de premio y board. Permite explorar campañas destacadas y ver que agencias fueron reconocidas en la principal cita global de la publicidad.
+Esta base de datos reúne las inscripciones con detalles de track, titulo, brand, agency, nivel de premio y board. Permite explorar las campañas destacadas y ver qué agencias fueron reconocidas en las principales citas globales de la publicidad, el marketing y la creatividad.
     </p>
 
     <div class="newsletter-box">
-        <h2>Mas info en el Newsletter de<br>Pablo Petovel</h2>
-        <p>Gratis. Powered by Beehiiv.</p>
+        <h2>Newsletter</h2>
+        <p>Powered by Beehiiv.</p>
         <form action="https://magic.beehiiv.com/v1/522e9063-6442-4cd6-927d-05200c3565bb" method="get" target="_blank">
             <input type="email" name="email" placeholder="Enter your email" required>
             <br>
@@ -192,9 +292,7 @@ Esta base de datos de Cannes Lions reúne las inscripciones del festival interna
         </form>
     </div>
 
-    <a href="/awards/canneslions/2020/data/cannes2020.csv" download class="btn-download">Descarga CSV</a>
-
-    <table id="cannesTable2020" class="display" style="width:100%">
+        <table id="cannesTable2020" class="display" style="width:100%">
         <thead>
             <tr>
                 <th>Track</th>
@@ -206,6 +304,8 @@ Esta base de datos de Cannes Lions reúne las inscripciones del festival interna
             </tr>
         </thead>
     </table>
+
+    <a href="/awards/canneslions/2020/data/cannes2020.csv" download class="btn-download">Download CSV</a>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
@@ -240,6 +340,19 @@ Esta base de datos de Cannes Lions reúne las inscripciones del festival interna
             });
         });
     </script>
+    <footer class="site-footer" aria-label="Footer">
+    <div>
+        <div>Databases by Pablo Petovel · Ideazite</div>
+        <div class="social" aria-label="Navigation links">
+        <a href="https://ideazite.com/">Home</a>
+        <a href="https://ideazite.com/awards/canneslions/">Cannes Lions Awards</a>
+        </div>
+        <div class="social" aria-label="Social links">
+        <a href="https://www.linkedin.com/in/pablopetovel" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://twitter.com/pablopetovel" target="_blank" rel="noopener">Twitter</a>
+        </div>
+    </div>
+    </footer>
 
 </body>
 </html>
