@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cannes Lions 2020 | Base de datos completa de campañas premiadas</title>
-  <meta name="description" content="Explora la base de datos Cannes Lions 2020: campañas, agencias, boards y descarga CSV.">
+  <title>Cannes Lions 2020 | Ganadores, shortlist y base de datos completas de campañas exitosas</title>
+  <meta name="description" content="Explora la base de datos Cannes Lions 2020: campañas exitosas, agencias, boards y descarga CSV.">
   <meta name="keywords" content="Cannes Lions 2020, agencias premiadas, shortlist, winners, lions, ganadores, campañas creativas, publicidad, marketing, awards, CSV, boards">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Cannes Lions 2020 | Base de datos completa de campañas premiadas">
+  <meta property="og:title" content="Ganadores, shortlist y base de datos completas de campañas exitosas">
   <meta property="og:description" content="Explora todas las entries y descargalas en CSV. Boards incluidos.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ideazite.com/awards/canneslions/2020/">
@@ -16,8 +16,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cannes Lions 2020 | Base de datos completa">
-  <meta name="twitter:description" content="Explora campañas, agencias y descarga CSV con boards.">
+  <meta name="twitter:title" content="Cannes Lions 2020 | Ganadores y base de datos completa">
+  <meta name="twitter:description" content="Explora campañas exitosas, agencias y descarga CSV con boards.">
   <meta name="twitter:image" content="https://ideazite.com/icons/canneslions2020.png">
 
   <!-- GA4 -->
@@ -73,6 +73,25 @@
     .dataTables_wrapper .dataTables_filter label,
     .dataTables_wrapper .dataTables_info,
     .dataTables_wrapper .dataTables_paginate { font-size:12px; }
+
+      .dataTables_wrapper .dataTables_length,
+      .dataTables_wrapper .dataTables_filter {
+        margin-bottom: 10px !important;
+      }
+
+      dataTables_wrapper .dataTables_scroll {
+        margin-top: 12px;
+        clear: both; /* clave para que quede debajo de los floats */
+      }
+
+      dataTables_wrapper .dataTables_info { margin-top: 10px; }
+      .dataTables_wrapper .dataTables_paginate { margin-top: 6px; }
+
+      @media (max-width: 600px) {
+      .dataTables_wrapper .dataTables_length,
+      .dataTables_wrapper .dataTables_filter { margin-bottom: 12px !important; }
+      .dataTables_wrapper .dataTables_scroll { margin-top: 12px; }
+      }
 
     /* Encabezados: aplicar tanto al thead original como al clonado por scrollX */
     .dataTables_wrapper table.dataTable thead th {
@@ -190,7 +209,7 @@
       <div>Databases by Pablo Petovel · Ideazite</div>
       <div class="social" aria-label="Navigation links">
         <a href="https://ideazite.com/">Home</a>
-        <a href="https://ideazite.com/awards/canneslions/">Cannes Lions Awards</a>
+        <a href="https://www.canneslions.com/">Cannes Lions Awards</a>
       </div>
       <div class="social" aria-label="Social links">
         <a href="https://www.linkedin.com/in/pablopetovel" target="_blank" rel="noopener">LinkedIn</a>
