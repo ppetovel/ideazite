@@ -301,39 +301,43 @@ Esta base de datos reúne las inscripciones con detalles de track, titulo, brand
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    
     <script>
         $(document).ready(function () {
-            Papa.parse('/awards/canneslions/2020/data/cannes2020.csv', {
-                download: true,
-                header: true,
-                skipEmptyLines: true,
-                complete: function (results) {
-                    $('#cannesTable2020').DataTable({
-                        data: results.data,
-                        columns: [
-                            { data: 'Track' },
-                            { data: 'Title' },
-                            { data: 'Brand' },
-                            { data: 'Agency' },
-                            { data: 'Award Level' },
-                            {
-                                data: 'Board image',
-                                render: function (data) {
-                                    return data ? `<a href="${data}" target="_blank">View Board</a>` : '';
-                                }
-                            }
-                        ],
-                        pageLength: 100,
-                        lengthMenu: [100, 500, 1000],
-                        scrollX: true
-                        autoWidth: false,
-                        initComplete: function () {
-                        document.getElementById('cannesTable2020').style.visibility = 'visible';
-                    });
-                }
-            });
-        });
+    Papa.parse('/awards/canneslions/2020/data/cannes2020.csv', {
+      download: true,
+      header: true,
+      skipEmptyLines: true,
+      complete: function (results) {
+        $('#cannesTable2020').DataTable({
+          data: results.data,
+          columns: [
+            { data: 'Track' },
+            { data: 'Title' },
+            { data: 'Brand' },
+            { data: 'Agency' },
+            { data: 'Award Level' },
+            {
+              data: 'Board image',
+              render: function (data) {
+                return data ? '<a href="' + data + '" target="_blank">View Board</a>' : '';
+              }
+            }
+          ],
+          pageLength: 100,
+          lengthMenu: [100, 500, 1000],
+          scrollX: true,            // <- aca faltaba la coma
+          autoWidth: false,
+          initComplete: function () {
+            document.getElementById('cannesTable2020').style.visibility = 'visible';
+          }
+        }); // cierra DataTable
+      } // cierra complete
+    }); // cierra Papa.parse
+  }); // cierra document.ready
+
     </script>
+    
     <footer class="site-footer" aria-label="Footer">
     <div>
         <div>Databases by Pablo Petovel · Ideazite</div>
