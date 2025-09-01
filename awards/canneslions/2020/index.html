@@ -39,15 +39,15 @@
     :root{
       --text:#2f2f2f;
       --muted:#616161;
-      --line:#e6e8ef;
+      --line:#f7f7fa;
 
       --lila:#cbb8ff;      /* detalle */
-      --lila-weak:#efeaff; /* fondo suave */
+      --lila-weak:#e9e0ff; /* fondo suave */
       --cel:#bfe8ff;       /* detalle */
       --cel-weak:#e9f7ff;  /* fondo suave */
 
       --link:#4e5aa7;
-      --link-hover:#2e377f;
+      --link-hover:#9094b3;
     }
 
     html,body{ margin:0; padding:0; background:#fff; color:var(--text); font:15px/1.55 Arial, Helvetica, sans-serif; text-align:center; }
@@ -79,7 +79,7 @@
 
     /* Newsletter (bordes y acentos, sin degradé) */
     .newsletter-box{
-      background:#fff;
+      background:hsl(187, 79%, 85%);
       border:1px solid var(--line);
       border-left:4px solid var(--cel);
       padding:12px 16px;
@@ -138,6 +138,9 @@
     .site-footer .social a{ margin-right:12px; color:#555; border-bottom:1px dotted #888; }
     .site-footer .social a:hover{ color:#000; border-bottom-color:#000; }
 
+    /* Subrayado solo para el link del Title */
+    #cannesTable2020 .title-link { text-decoration: underline; }
+
     @media (max-width:600px){
       html,body{ font-size:14px; }
       .newsletter-box input[type="email"]{ width:100%; box-sizing:border-box; }
@@ -155,14 +158,14 @@
     <h1>Cannes Lions 2020</h1>
     <p class="sublead">Ganadores, shortlist, entries, boards y la base de datos</p>
     <p class="intro">
-      Esta base de datos reúne las inscripciones con detalles de track, título, brand, agency, nivel de premio y board.
-      Permite explorar campañas destacadas y ver qué agencias fueron reconocidas en las principales citas globales de la publicidad,
-      el marketing y la creatividad.
+      Esta base de datos reúne las inscripciones con detalles de track, título, brand, agency, nivel de premio y board o imagen.
+      Explora campañas destacadas y mira qué agencias fueron reconocidas en las principales citas globales de publicidad,
+      marketing y creatividad. Al final de la tabla, el CSV del festival completo.
     </p>
 
     <div class="newsletter-box">
-      <h2>Newsletter</h2>
-      <p>Powered by Beehiiv.</p>
+      <h2>Más datos de todos los festivales</h2>
+      <p>Newsletter [Powered by Beehiiv]</p>
       <form action="https://magic.beehiiv.com/v1/522e9063-6442-4cd6-927d-05200c3565bb" method="get" target="_blank">
         <input type="email" name="email" placeholder="Enter your email" required>
         <br>
@@ -180,30 +183,48 @@
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
   <script>
-    // En home: ocultamos Festival, Year y Category
-    var EXCLUDE = ['festival','year','category'];
-    function shouldShow(name){ return EXCLUDE.indexOf(name.toLowerCase().trim()) === -1; }
+    // En home: ocultamos Festival, Year, Category, Board Image y Permalink
+    var EXCLUDE = ['festival','year','category','board image','board_image','boardimage','permalink'];
+
+    function shouldShow(name){
+      return EXCLUDE.indexOf((name||'').toLowerCase().trim()) === -1;
+    }
+
     function buildColumns(fields){
       return fields.filter(shouldShow).map(function(name){
-        var key = name.toLowerCase().trim();
-        if (key === 'board image' || key === 'board_image' || key === 'boardimage'){
-          return { title:name, data:name, render:function(d){ return d ? '<a href="'+d+'" target="_blank" rel="noopener">View Board</a>' : ''; } };
+        var key = (name||'').toLowerCase().trim();
+
+        // Title con enlace a la campaña individual si hay Permalink
+        if (key === 'title') {
+          return {
+            title: name,
+            data: null,
+            render: function(row){
+              var t = row['Title'] || '';
+              var url = row['Permalink'] || '';
+              return (t && url) ? '<a class="title-link" href="'+url+'" rel="noopener">'+t+'</a>' : t;
+            }
+          };
         }
-        return { title:name, data:name };
+
+        // Cualquier otra columna normalmente
+        return { title: name, data: name };
       });
     }
+
     $(document).ready(function(){
-      Papa.parse('/awards/canneslions/2020/data/cannes2020.csv',{
+      Papa.parse('/awards/canneslions/2020/data/cannes2020.csv', { // si usás el _permalinks.csv, cambiá esta ruta
         download:true, header:true, skipEmptyLines:true,
         complete:function(results){
-          var rows=results.data||[];
-          var fields=(results.meta&&results.meta.fields)?results.meta.fields:(rows.length?Object.keys(rows[0]):[]);
+          var rows = results.data || [];
+          var fields = (results.meta && results.meta.fields) ? results.meta.fields : (rows.length ? Object.keys(rows[0]) : []);
           if(!fields.length) return;
-          var columns=buildColumns(fields);
+
+          var columns = buildColumns(fields);
           $('#cannesTable2020').DataTable({
-            data:rows, columns:columns,
-            pageLength:100, lengthMenu:[100,500,1000],
-            scrollX:true, deferRender:true
+            data: rows, columns: columns,
+            pageLength: 100, lengthMenu: [100,500,1000],
+            scrollX: true, deferRender: true
           });
         }
       });
