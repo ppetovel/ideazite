@@ -41,10 +41,13 @@
       --muted:#616161;
       --line:#f7f7fa;
 
-      --lila:#cbb8ff;      /* detalle */
-      --lila-weak:#e9e0ff; /* fondo suave */
-      --cel:#bfe8ff;       /* detalle */
-      --cel-weak:#e9f7ff;  /* fondo suave */
+      /* Unificación lila */
+      --lila:#cbb8ff;
+      --lila-hover:#b5a1ff;
+      --lila-weak:#e9e0ff;
+
+      --cel:#bfe8ff;
+      --cel-weak:#e9f7ff;
 
       --link:#4e5aa7;
       --link-hover:#9094b3;
@@ -63,7 +66,6 @@
       font-size:26px;
       font-weight:700;
       color:#222;
-      /* sin recuadro; subrayado sutil lila */
       border-bottom:3px solid var(--lila);
       display:inline-block;
       padding-bottom:4px;
@@ -77,7 +79,7 @@
     .nav-links a::after{ content:""; display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--cel); margin:0 6px 1px; }
     .nav-links a:last-child::after{ display:none; }
 
-    /* Newsletter (bordes y acentos, sin degradé) */
+    /* Newsletter */
     .newsletter-box{
       background:hsl(187, 79%, 85%);
       border:1px solid var(--line);
@@ -93,14 +95,30 @@
       padding:6px 10px; width:68%; font-size:13px; border:1px solid var(--line); border-radius:6px; background:#fff;
     }
 
-    /* Botón (lila) */
+    /* Botón lila */
     .btn-download{
-      display:inline-block; background:var(--lila); color:#1b1b1b; padding:8px 14px;
-      margin:14px 0 8px; border:0; border-radius:8px; font-weight:700; font-size:13px;
+      display:inline-block;
+      background:var(--lila);
+      color:#1b1b1b;
+      padding:8px 14px;
+      margin:14px 0 8px;
+      border:0;
+      border-radius:8px;
+      font-weight:700;
+      font-size:13px;
+      text-decoration:none;
+      cursor:pointer;
     }
-    .btn-download:hover{ background:#b5a1ff; }
+    .btn-download:hover,
+    .btn-download:focus{
+      background:var(--lila-hover);
+      color:#1b1b1b;
+      text-decoration:none;
+      outline:0;
+    }
+    a.btn-download:hover{ color:#1b1b1b; text-decoration:none; }
 
-    /* DataTables: encabezado lila-weak, hover cel-weak, líneas suaves */
+    /* DataTables */
     table.dataTable{ width:100% !important; border-collapse:collapse; }
     table.dataTable thead th{
       background:var(--lila-weak) !important;
@@ -115,21 +133,55 @@
 
     /* Controles */
     .dataTables_length select, .dataTables_filter input{
-      background:#fff !important; color:var(--text) !important; border:1px solid var(--line) !important;
-      padding:6px; border-radius:6px; font-size:12px !important;
-    }
+      background:#fff !important;
+  color:var(--text) !important;
+  border:1px solid #bbb !important;   /* más oscuro que var(--line) */
+  padding:6px 8px;
+  border-radius:6px;
+  font-size:12px !important;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.08); /* sutil relieve */
+}
+.dataTables_filter input:focus {
+  border-color: var(--lila-hover) !important;
+  box-shadow: 0 0 3px rgba(181,161,255,0.6); /* leve glow lila */
+  outline: none;
+}
+
     .dataTables_paginate a{
-      background:#fff !important; color:var(--link) !important; border:1px solid var(--line) !important;
-      padding:4px 8px; margin:2px; border-radius:6px;
+      background:var(--lila) !important;
+      color:#1b1b1b !important;
+      border:1px solid var(--line) !important;
+      padding:4px 10px; margin:2px; border-radius:8px;
+      text-decoration:none !important;
+      box-shadow:none;
     }
-    .dataTables_paginate a:hover{ background:#f5f7ff !important; color:var(--link-hover) !important; border-color:var(--link-hover) !important; }
-    .dataTables_paginate .current{ background:var(--link) !important; color:#fff !important; border-color:var(--link) !important; }
+    .dataTables_paginate a:hover,
+    .dataTables_paginate a:focus{
+      background:var(--lila-hover) !important;
+      color:#1b1b1b !important;
+      border-color:var(--line) !important;
+      text-decoration:none !important;
+      outline:0;
+    }
+    .dataTables_paginate .current{
+      background:var(--lila-hover) !important;
+      color:#1b1b1b !important;
+      border-color:var(--line) !important;
+    }
+    .dataTables_paginate .disabled,
+    .dataTables_paginate .disabled:hover{
+      background:var(--lila-weak) !important;
+      color:#5c5c5c !important;
+      border-color:var(--line) !important;
+      cursor:default !important;
+    }
+
     .dataTables_wrapper .dataTables_length,
     .dataTables_wrapper .dataTables_filter{ margin-bottom:10px !important; }
     .dataTables_wrapper .dataTables_info,
     .dataTables_wrapper .dataTables_paginate{ font-size:12px; margin-top:6px; }
 
-    /* Footer compacto */
+    /* Footer */
     .site-footer{
       margin:18px auto 14px; padding:8px 10px; max-width:920px;
       border-top:1px solid var(--line); color:#555; font-size:13px; line-height:1.35;
@@ -138,7 +190,6 @@
     .site-footer .social a{ margin-right:12px; color:#555; border-bottom:1px dotted #888; }
     .site-footer .social a:hover{ color:#000; border-bottom-color:#000; }
 
-    /* Subrayado solo para el link del Title */
     #cannesTable2020 .title-link { text-decoration: underline; }
 
     @media (max-width:600px){
@@ -183,22 +234,30 @@
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
   <script>
-    // En home: ocultamos Festival, Year, Category, Board Image y Permalink
     var EXCLUDE = ['festival','year','category','board image','board_image','boardimage','permalink'];
+    function shouldShow(name){ return EXCLUDE.indexOf((name||'').toLowerCase().trim()) === -1; }
 
-    function shouldShow(name){
-      return EXCLUDE.indexOf((name||'').toLowerCase().trim()) === -1;
+    // Ranking de premios
+    var AWARD_RANK = {
+      "grand prix": 0,
+      "titanium": 1, "titaniuam": 1, "titanum": 1,
+      "gold": 2,
+      "silver": 3,
+      "bronze": 4, "blonze": 4,
+      "shortlist": 5, "shirtlist": 5,
+      "submitted": 6, "submited": 6
+    };
+    function awardRankOf(val){
+      var v = (val || "").toString().trim().toLowerCase();
+      return (v in AWARD_RANK) ? AWARD_RANK[v] : 999;
     }
 
     function buildColumns(fields){
       return fields.filter(shouldShow).map(function(name){
         var key = (name||'').toLowerCase().trim();
-
-        // Title con enlace a la campaña individual si hay Permalink
         if (key === 'title') {
           return {
-            title: name,
-            data: null,
+            title: name, data: null,
             render: function(row){
               var t = row['Title'] || '';
               var url = row['Permalink'] || '';
@@ -206,14 +265,23 @@
             }
           };
         }
-
-        // Cualquier otra columna normalmente
+        if (key.indexOf('award') !== -1) {
+          return {
+            title: name, data: name,
+            render: function(data, type, row){
+              if (type === 'sort' || type === 'type') {
+                return awardRankOf(data);
+              }
+              return data;
+            }
+          };
+        }
         return { title: name, data: name };
       });
     }
 
     $(document).ready(function(){
-      Papa.parse('/awards/canneslions/2020/data/cannes2020.csv', { // si usás el _permalinks.csv, cambiá esta ruta
+      Papa.parse('/awards/canneslions/2020/data/cannes2020.csv', {
         download:true, header:true, skipEmptyLines:true,
         complete:function(results){
           var rows = results.data || [];
@@ -221,8 +289,16 @@
           if(!fields.length) return;
 
           var columns = buildColumns(fields);
+          var awardIdx = -1;
+          for (var i = 0; i < columns.length; i++) {
+            var t = (columns[i].title || '').toLowerCase();
+            if (t.indexOf('award') !== -1) { awardIdx = i; break; }
+          }
+
           $('#cannesTable2020').DataTable({
-            data: rows, columns: columns,
+            data: rows,
+            columns: columns,
+            order: (awardIdx !== -1) ? [[awardIdx, 'asc']] : [],
             pageLength: 100, lengthMenu: [100,500,1000],
             scrollX: true, deferRender: true
           });
@@ -231,7 +307,7 @@
     });
   </script>
 
-  <!-- Footer include -->
+  <!-- Footer -->
   <div id="footer-container"></div>
   <script>
     fetch("/includes/footer.html")
