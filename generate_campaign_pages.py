@@ -3,7 +3,7 @@
 # y crea un CSV nuevo con columna "Permalink" (ruta relativa).
 # Salida de consola en ASCII (sin símbolos raros).
 
-import csv, os, re, unicodedata, argparse, html, pathlib, sys, shutil
+import csv, os, re, unicodedata, argparse, html, pathlib, sys, shutil, urllib.parse
 
 # -------- Config por defecto para Cannes 2020 --------
 FESTIVAL     = "Cannes Lions"
@@ -149,9 +149,6 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 
     <div class="links">
       %(BOARD_LINK)s
-      <!-- Si algun dia hay video:
-      <p><a href="%(CASE_VIDEO)s" target="_blank" rel="noopener">Case video</a></p>
-      -->
     </div>
 
     <!-- AD bottom -->
@@ -176,7 +173,6 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 
 # -------- Generador --------
 def generate_pages_and_permalink_csv(csv_path: str, permalink_csv_out: str, clean: bool = False):
-    # limpiar carpeta si se pide
     if clean and os.path.isdir(OUTPUT_ROOT):
         shutil.rmtree(OUTPUT_ROOT)
         print("[OK] Carpeta de campañas eliminada antes de generar:", OUTPUT_ROOT)
@@ -184,20 +180,17 @@ def generate_pages_and_permalink_csv(csv_path: str, permalink_csv_out: str, clea
     os.makedirs(OUTPUT_ROOT, exist_ok=True)
     used_slugs = set()
 
-    # Leer CSV original
     with open(csv_path, newline='', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         rows = list(reader)
         fieldnames = reader.fieldnames or []
 
-    # Asegurar columna Permalink al final si no existe
     has_permalink = any(fn.lower().strip() == "permalink" for fn in fieldnames)
     if not has_permalink:
         fieldnames_out = fieldnames + ["Permalink"]
     else:
-        fieldnames_out = fieldnames[:]  # mismo orden
+        fieldnames_out = fieldnames[:]
 
-    # Procesar filas y generar páginas
     out_rows = []
     for row in rows:
         title       = (row.get("Title") or "").strip()
@@ -209,12 +202,10 @@ def generate_pages_and_permalink_csv(csv_path: str, permalink_csv_out: str, clea
         board_image = (row.get("Board image") or "").strip()
         year_val    = (row.get("Year") or YEAR).strip() or YEAR
 
-        # SLUG
         slug_seed = " ".join([title, brand, agency, year_val])
         slug = slugify(slug_seed)
         slug = ensure_unique(slug, used_slugs)
 
-        # Paths
         campaign_dir = os.path.join(OUTPUT_ROOT, slug)
         os.makedirs(campaign_dir, exist_ok=True)
 
@@ -222,7 +213,6 @@ def generate_pages_and_permalink_csv(csv_path: str, permalink_csv_out: str, clea
         year_url  = f"{SITE_BASE}{YEAR_ROOT}"
         permalink_rel = f"{YEAR_ROOT}campaigns/{slug}/"
 
-        # Render HTML
         data = {
             "TITLE": html_escape(title),
             "TITLE_RAW": html_escape(row.get("Title","")),
@@ -248,12 +238,10 @@ def generate_pages_and_permalink_csv(csv_path: str, permalink_csv_out: str, clea
 
         html_out = PAGE_TEMPLATE % data
 
-        # Escribir index.html
         out_file = os.path.join(campaign_dir, "index.html")
         with open(out_file, "w", encoding="utf-8") as wf:
             wf.write(html_out)
 
-        # Fila de salida con Permalink
         new_row = {k: row.get(k, "") for k in fieldnames}
         if has_permalink:
             if not (new_row.get("Permalink") or "").strip():
@@ -264,7 +252,6 @@ def generate_pages_and_permalink_csv(csv_path: str, permalink_csv_out: str, clea
         out_rows.append(new_row)
         print("[OK] Generado:", out_file)
 
-    # Escribir CSV de salida con Permalink
     with open(permalink_csv_out, "w", newline="", encoding="utf-8") as wf:
         writer = csv.DictWriter(wf, fieldnames=fieldnames_out)
         writer.writeheader()
@@ -287,7 +274,22 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     SITE_BASE = args.site_base.rstrip("/")
-    YEAR_ROOT = args.year_root if args.year_root.endswith("/") else args.year_root + "/"
+
+    # --- Normalizar YEAR_ROOT ---
+    def _to_web_root(s: str) -> str:
+        s = (s or "").strip().replace("\\", "/")
+        if s.startswith("http://") or s.startswith("https://"):
+            s = urllib.parse.urlsplit(s).path or "/"
+        m = re.search(r"(/awards/.*)$", s, flags=re.IGNORECASE)
+        if m:
+            s = m.group(1)
+        if not s.startswith("/"):
+            s = "/" + s
+        if not s.endswith("/"):
+            s = s + "/"
+        return s
+
+    YEAR_ROOT = _to_web_root(args.year_root)
     OUTPUT_ROOT = args.outdir
     FESTIVAL = args.festival
     YEAR = args.year
