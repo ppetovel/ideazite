@@ -46,7 +46,7 @@ def render_board_link(url: str) -> str:
 # -------- Template de campaña (gris, igual al ejemplo que pasaste) --------
 # Nota: para que el operador % no choque con porcentajes en CSS, usar %%.
 PAGE_TEMPLATE = """<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
 
@@ -101,7 +101,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   <!-- Estilos en grises (tal cual tu ejemplo) -->
   <style>
     body { font-family: Arial, sans-serif; color:#333; background:#fff; margin:0; }
-    a { color:#555; text-decoration:none; }
+    a { color:#555; text-decoration:underline; }
     a:hover { text-decoration:underline; color:#000; }
     .wrap { max-width: 800px; margin: 0 auto; padding: 16px; }
     h1 { color:#444; margin-bottom: 8px; }
