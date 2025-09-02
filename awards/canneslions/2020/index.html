@@ -281,7 +281,7 @@
     }
 
     $(document).ready(function(){
-      Papa.parse('/awards/canneslions/2020/data/cannes2020.csv', {
+      Papa.parse('/awards/canneslions/2020/data/cannes2020_permalinks.csv', {
         download:true, header:true, skipEmptyLines:true,
         complete:function(results){
           var rows = results.data || [];
