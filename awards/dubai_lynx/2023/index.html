@@ -1,208 +1,243 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dubai Lynx 2023 | Base de datos completa de campañas premiadas</title>
-    <meta name="description" content="Consulta la base de datos Dubai Lynx 2023 con campañas, agencias, boards y descarga CSV. Creatividad en Medio Oriente.">
-    <meta name="keywords" content="Dubai Lynx 2023, agencias premiadas, campañas creativas, publicidad, marketing, awards, CSV, boards">
+  <meta charset="UTF-8">
+  <title>Dubai Lynx 2023 | Ganadores, shortlist y base de datos completas de campañas exitosas</title>
+  <meta name="description" content="Explora la base de datos Dubai Lynx 2023: campañas exitosas, agencias, boards y descarga CSV.">
+  <link rel="canonical" href="https://ideazite.com/awards/dubai_lynx/2023/">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Dubai Lynx 2023, agencias premiadas, shortlist, winners, ganadores, campañas creativas, publicidad, marketing, awards, CSV, boards">
 
-    <meta property="og:title" content="Dubai Lynx 2023 | Base de datos completa de campañas premiadas">
-    <meta property="og:description" content="Explora todas las entries y descárgalas en CSV. Boards incluidos.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ideazite.com/awards/dubai_lynx/2023/">
-    <meta property="og:image" content="https://ideazite.com/icons/dubailynx2023.png">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dubai Lynx 2023 | Ganadores, shortlist y base de datos completas de campañas exitosas">
+  <meta property="og:description" content="Explora todas las entries y descárgalas en CSV. Boards incluidos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ideazite.com/awards/dubai_lynx/2023/">
+  <meta property="og:image" content="https://ideazite.com/icons/dubailynx2023.png">
+  <meta property="og:image:alt" content="Dubai Lynx 2023">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Dubai Lynx 2023 | Base de datos completa">
-    <meta name="twitter:description" content="Explora campañas, agencias y descarga CSV con boards.">
-    <meta name="twitter:image" content="https://ideazite.com/icons/dubailynx2023.png">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dubai Lynx 2023 | Ganadores y base de datos completa">
+  <meta name="twitter:description" content="Explora campañas exitosas, agencias y descarga CSV con boards.">
+  <meta name="twitter:image" content="https://ideazite.com/icons/dubailynx2023.png">
+  <meta name="twitter:image:alt" content="Dubai Lynx 2023">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WBBBSGK7YX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-WBBBSGK7YX');
-    </script>
+  <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
 
-    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <!-- Centralizado -->
+  <script src="/consent/consent-init.js" defer></script>
+  <script src="/analytics/ga-init.js" defer></script>
+  <script src="/ads/ads-init.js" defer></script>
 
-    <style>
-        body {
-            background-color: #ffffff;
-            color: #333;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        h1 { color: #b99a00; margin-top: 30px; }
-        .sublead { font-size: 14px; color: #666; margin: 6px 0 8px; }
-        .intro {
-            max-width: 780px;
-            margin: 10px auto 15px;
-            line-height: 1.4;
-            font-size: 13px;
-            color: #777;
-            text-align: center;
-            padding: 0 12px;
-        }
-        @media (max-width: 600px) {
-            .intro { padding: 0 16px; font-size: 14px; line-height: 1.5; }
-        }
-        .newsletter-box {
-            background-color: #fffbeb;
-            padding: 12px 16px;
-            margin: 15px auto;
-            max-width: 420px;
-            border-radius: 8px;
-            border: 1px solid #d4af37;
-        }
-        .newsletter-box h2 {
-            color: #b99a00;
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-        .newsletter-box p {
-            font-size: 13px;
-            margin-bottom: 10px;
-            color: #555;
-        }
-        .newsletter-box input[type="email"] {
-            padding: 6px 10px;
-            width: 65%;
-            font-size: 13px;
-            border: 1px solid #d4af37;
-            border-radius: 4px;
-        }
-        .btn-download {
-            display: inline-block;
-            background-color: #b99a00;
-            color: white;
-            padding: 8px 16px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 14px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .btn-download:hover { background-color: #d4af37; }
-        table.dataTable {
-            border-collapse: collapse;
-            width: 95%;
-            margin: 20px auto;
-            background-color: white;
-            border: 1px solid #e3d98d;
-        }
-        table.dataTable thead th {
-            background-color: #b99a00;
-            color: white;
-            border: 1px solid #e3d98d;
-            padding: 8px;
-        }
-        table.dataTable tbody tr:nth-child(even) { background-color: #fefae0; }
-        table.dataTable tbody tr:hover { background-color: #f5efc7; }
-        table.dataTable td {
-            border: 1px solid #ddd;
-            padding: 6px 10px;
-            text-align: left;
-        }
-        .dataTables_length select,
-        .dataTables_filter input {
-            background-color: #fefae0 !important;
-            color: #333 !important;
-            border: 1px solid #b99a00 !important;
-            padding: 5px;
-            border-radius: 4px;
-        }
-        .dataTables_paginate a {
-            background-color: #fefae0 !important;
-            color: #b99a00 !important;
-            border: 1px solid #b99a00 !important;
-            padding: 3px 8px;
-            margin: 2px;
-            border-radius: 4px;
-            text-decoration: none;
-        }
-        .dataTables_paginate a:hover {
-            background-color: #d4af37 !important;
-            color: white !important;
-        }
-        .dataTables_paginate .current {
-            background-color: #b99a00 !important;
-            color: white !important;
-        }
-    </style>
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+  <style>
+    :root{
+      --text:#2f2f2f;
+      --muted:#616161;
+      --line:#f7f7fa;
+      --lila:#cbb8ff;
+      --lila-hover:#b5a1ff;
+      --lila-weak:#e9e0ff;
+      --cel:#bfe8ff;
+      --cel-weak:#e9f7ff;
+      --link:#4e5aa7;
+      --link-hover:#9094b3;
+    }
+    html,body{ margin:0; padding:0; background:#fff; color:var(--text); font:15px/1.55 Arial, Helvetica, sans-serif; text-align:center; }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ color:var(--link-hover); text-decoration:underline; }
+    .wrap{ max-width:1000px; margin:0 auto; padding:0 12px 20px; }
+
+    h1{ margin:26px 0 4px; font-size:26px; font-weight:700; color:#222; border-bottom:3px solid var(--lila); display:inline-block; padding-bottom:4px; }
+    .sublead{ font-size:14px; color:#303030; margin:8px 0 10px; }
+    .intro{ max-width:780px; margin:8px auto 16px; font-size:14px; color:#525252; }
+
+    .nav-links{ margin:10px 0 12px; font-size:13px; }
+    .nav-links a{ margin:0 6px; }
+    .nav-links a::after{ content:""; display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--cel); margin:0 6px 1px; }
+    .nav-links a:last-child::after{ display:none; }
+
+    .newsletter-box{
+      background:hsl(187, 79%, 85%);
+      border:1px solid var(--line);
+      border-left:4px solid var(--cel);
+      padding:12px 16px;
+      margin:14px auto 18px;
+      max-width:420px;
+      border-radius:8px;
+    }
+    .newsletter-box h2{ font-size:16px; margin:0 0 6px; color:#222; }
+    .newsletter-box p{ font-size:13px; margin:0 0 8px; color:#444; }
+    .newsletter-box input[type="email"]{
+      padding:6px 10px; width:68%; font-size:13px; border:1px solid var(--line); border-radius:6px; background:#fff;
+    }
+
+    .btn-download{
+      display:inline-block;
+      background:var(--lila);
+      color:#1b1b1b;
+      padding:8px 14px;
+      margin:14px 0 8px;
+      border:0;
+      border-radius:8px;
+      font-weight:700;
+      font-size:13px;
+      text-decoration:none;
+      cursor:pointer;
+    }
+    .btn-download:hover{ background:var(--lila-hover); color:#1b1b1b; }
+
+    table.dataTable{ width:100% !important; border-collapse:collapse; }
+    table.dataTable thead th{
+      background:var(--lila-weak) !important;
+      color:#2d2d2d !important;
+      border:1px solid var(--line) !important;
+      padding:6px !important; font-size:12px !important; white-space:nowrap; font-weight:600 !important;
+    }
+    table.dataTable tbody tr:nth-child(even){ background:#fcfcfe; }
+    table.dataTable tbody tr:hover{ background:var(--cel-weak); }
+    table.dataTable td{ border:1px solid var(--line); padding:6px 10px; text-align:left; font-size:12px; line-height:1.4; }
+
+    .dataTables_length select, .dataTables_filter input{
+      background:#fff !important; color:var(--text) !important; border:1px solid #bbb !important;
+      padding:6px 8px; border-radius:6px; font-size:12px !important; box-shadow: inset 0 1px 2px rgba(0,0,0,0.08);
+    }
+    .dataTables_filter input:focus { border-color:var(--lila-hover) !important; box-shadow: 0 0 3px rgba(181,161,255,0.6); outline:none; }
+
+    .dataTables_paginate a{
+      background:var(--lila) !important; color:#1b1b1b !important; border:1px solid var(--line) !important;
+      padding:4px 10px; margin:2px; border-radius:8px; text-decoration:none !important; box-shadow:none;
+    }
+    .dataTables_paginate a:hover{ background:var(--lila-hover) !important; color:#1b1b1b !important; }
+
+    .site-footer{ margin:18px auto 14px; padding:8px 10px; max-width:920px; border-top:1px solid var(--line); color:#555; font-size:13px; line-height:1.35; }
+    #lynxTable2023 .title-link { text-decoration: underline; }
+
+    @media (max-width:600px){
+      html,body{ font-size:14px; }
+      .newsletter-box input[type="email"]{ width:100%; box-sizing:border-box; }
+      table.dataTable thead th{ font-size:11px !important; padding:5px !important; }
+      table.dataTable td{ font-size:11px; padding:4px 6px; }
+    }
+  </style>
 </head>
 <body>
+  <div class="wrap">
+    <nav class="nav-links">
+      <a href="https://ideazite.com/">Home</a>
+    </nav>
 
     <h1>Dubai Lynx 2023</h1>
-    <p class="sublead">Base de datos completa: tabla + CSV</p>
+    <p class="sublead">Ganadores, shortlist, entries, boards y la base de datos</p>
     <p class="intro">
-Esta base de datos de Dubai Lynx reúne las campañas inscritas en el festival de creatividad de Medio Oriente, con detalles de track, título, brand, agency, nivel de premio y board. Una herramienta para descubrir qué agencias destacaron en la región y explorar insights creativos relevantes para el mercado MENA.
+      Esta base de datos reúne las inscripciones con detalles de track, título, brand, agency, nivel de premio y board o imagen.
+      Explora campañas destacadas y mira qué agencias fueron reconocidas en las principales citas globales de publicidad,
+      marketing y creatividad. Al final de la tabla, el CSV del festival completo.
     </p>
 
     <div class="newsletter-box">
-        <h2>Más info en el Newsletter de<br>Pablo Petovel</h2>
-        <p>Gratis. Powered by Beehiiv.</p>
-        <form action="https://magic.beehiiv.com/v1/522e9063-6442-4cd6-927d-05200c3565bb" method="get" target="_blank">
-            <input type="email" name="email" placeholder="Enter your email" required>
-            <br>
-            <button type="submit" class="btn-download">Subscribe</button>
-        </form>
+      <h2>Más datos de todos los festivales</h2>
+      <p>Newsletter [Powered by Beehiiv]</p>
+      <form action="https://magic.beehiiv.com/v1/522e9063-6442-4cd6-927d-05200c3565bb" method="get" target="_blank">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <br>
+        <button type="submit" class="btn-download">Subscribe</button>
+      </form>
     </div>
 
-    <a href="/awards/dubai_lynx/2023/data/dubai_lynx2023.csv" download class="btn-download">↓ Descarga CSV</a>
+    <table id="lynxTable2023" class="display"></table>
+    <a href="/awards/dubai_lynx/2023/data/dubai_lynx2023.csv" download class="btn-download">Download CSV</a>
+  </div>
 
-    <table id="lynxTable2023" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th>Track</th>
-                <th>Title</th>
-                <th>Brand</th>
-                <th>Agency</th>
-                <th>Award Level</th>
-                <th>Board Image</th>
-            </tr>
-        </thead>
-    </table>
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            Papa.parse('/awards/dubai_lynx/2023/data/dubai_lynx2023.csv', {
-                download: true,
-                header: true,
-                skipEmptyLines: true,
-                complete: function (results) {
-                    $('#lynxTable2023').DataTable({
-                        data: results.data,
-                        columns: [
-                            { data: 'Track' },
-                            { data: 'Title' },
-                            { data: 'Brand' },
-                            { data: 'Agency' },
-                            { data: 'Award Level' },
-                            {
-                                data: 'Board image',
-                                render: function (data) {
-                                    return data ? `<a href="${data}" target="_blank">View Board</a>` : '';
-                                }
-                            }
-                        ],
-                        pageLength: 100,
-                        lengthMenu: [100, 500, 1000],
-                        scrollX: true
-                    });
-                }
-            });
-        });
-    </script>
+  <script>
+    var EXCLUDE = ['festival','year','category','board image','board_image','boardimage','permalink'];
+    function shouldShow(name){ return EXCLUDE.indexOf((name||'').toLowerCase().trim()) === -1; }
 
+    var AWARD_RANK = {
+      "grand prix": 0,
+      "titanium": 1, "titaniuam": 1, "titanum": 1,
+      "gold": 2,
+      "silver": 3,
+      "bronze": 4, "blonze": 4,
+      "shortlist": 5, "shirtlist": 5,
+      "submitted": 6, "submited": 6
+    };
+    function awardRankOf(val){
+      var v = (val || "").toString().trim().toLowerCase();
+      return (v in AWARD_RANK) ? AWARD_RANK[v] : 999;
+    }
+
+    function buildColumns(fields){
+      return fields.filter(shouldShow).map(function(name){
+        var key = (name||'').toLowerCase().trim();
+        if (key === 'title') {
+          return {
+            title: name, data: null,
+            render: function(row){
+              var t = row['Title'] || '';
+              var url = row['Permalink'] || '';
+              return (t && url) ? '<a class="title-link" href="'+url+'" rel="noopener">'+t+'</a>' : t;
+            }
+          };
+        }
+        if (key.indexOf('award') !== -1) {
+          return {
+            title: name, data: name,
+            render: function(data, type, row){
+              if (type === 'sort' || type === 'type') {
+                return awardRankOf(data);
+              }
+              return data;
+            }
+          };
+        }
+        return { title: name, data: name };
+      });
+    }
+
+    $(document).ready(function(){
+      Papa.parse('/awards/dubai_lynx/2023/data/dubai_lynx2023_permalinks.csv', {
+        download:true, header:true, skipEmptyLines:true,
+        complete:function(results){
+          var rows = results.data || [];
+          var fields = (results.meta && results.meta.fields) ? results.meta.fields : (rows.length ? Object.keys(rows[0]) : []);
+          if(!fields.length) return;
+
+          var columns = buildColumns(fields);
+          var awardIdx = -1;
+          for (var i = 0; i < columns.length; i++) {
+            var t = (columns[i].title || '').toLowerCase();
+            if (t.indexOf('award') !== -1) { awardIdx = i; break; }
+          }
+
+          $('#lynxTable2023').DataTable({
+            data: rows,
+            columns: columns,
+            order: (awardIdx !== -1) ? [[awardIdx, 'asc']] : [],
+            pageLength: 100, lengthMenu: [100,500,1000],
+            scrollX: true, deferRender: true
+          });
+        }
+      });
+    });
+  </script>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+  <script>
+    fetch("/includes/footer.html")
+      .then(r=>r.text())
+      .then(html=>{ document.getElementById("footer-container").innerHTML=html; })
+      .catch(()=>{});
+  </script>
 </body>
 </html>
