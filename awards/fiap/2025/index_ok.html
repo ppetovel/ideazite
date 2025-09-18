@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIAP 2025 | Base de datos completa de campañas premiadas</title>
+  <meta name="description" content="Explora la base de datos FIAP 2025 con entries: campañas, agencias premiadas y descarga CSV.">
+  <meta name="keywords" content="FIAP 2025, agencias premiadas, campañas creativas, publicidad, marketing, awards, CSV, tablas">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FIAP 2025 | Base de datos completa de campañas premiadas">
+  <meta property="og:description" content="Explora todas las entries y descárgalas en CSV.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ideazite.com/awards/fiap/2025/">
+  <meta property="og:image" content="https://ideazite.com/icons/fiap2025.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FIAP 2025 | Base de datos completa">
+  <meta name="twitter:description" content="Explora campañas, agencias y descarga CSV.">
+  <meta name="twitter:image" content="https://ideazite.com/icons/fiap2025.png">
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WBBBSGK7YX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} // ASCII only
+    gtag('js', new Date());
+    gtag('config', 'G-WBBBSGK7YX');
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+  <style>
+    :root{
+      --fiap:#ff7f0e; /* naranja FIAP */
+      --fiap-strong:#ff9933; /* hover */
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #333;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      margin: 0;
+    }
+    h1 {
+      color: var(--fiap);
+      margin-top: 30px;
+    }
+    p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .sublead {
+      font-size: 14px;
+      color: #666;
+      margin: 6px 0 8px;
+    }
+    .intro {
+      max-width: 780px;
+      margin: 10px auto 15px;
+      line-height: 1.4;
+      font-size: 13px;
+      color: #777;
+      text-align: center;
+      padding: 0 12px;
+    }
+    @media (max-width: 600px) {
+      .intro {
+        padding: 0 16px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+
+    .newsletter-box {
+      background-color: #fff8f0;
+      padding: 12px 16px;
+      margin: 15px auto;
+      max-width: 420px;
+      border-radius: 8px;
+      border: 1px solid #ffd7b0;
+    }
+    .newsletter-box h2 {
+      color: var(--fiap);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .newsletter-box p {
+      font-size: 13px;
+      margin-bottom: 10px;
+      color: #555;
+    }
+    .newsletter-box input[type="email"] {
+      padding: 6px 10px;
+      width: 65%;
+      font-size: 13px;
+      border: 1px solid #ffd7b0;
+      border-radius: 4px;
+    }
+
+    .btn-download {
+      display: inline-block;
+      background-color: var(--fiap);
+      color: #fff;
+      padding: 8px 16px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-download:hover {
+      background-color: var(--fiap-strong);
+    }
+
+    table.dataTable {
+      border-collapse: collapse;
+      width: 95%;
+      margin: 20px auto;
+      background-color: #fff;
+      border: 1px solid #ffd7b0;
+    }
+    table.dataTable thead th {
+      background-color: var(--fiap);
+      color: #fff;
+      border: 1px solid #ffd7b0;
+      padding: 8px;
+      text-align: left;
+    }
+    table.dataTable tbody tr {
+      border-bottom: 1px solid #ddd;
+    }
+    table.dataTable tbody tr:nth-child(even) {
+      background-color: #fff2e6;
+    }
+    table.dataTable tbody tr:hover {
+      background-color: #ffe0c2;
+    }
+    table.dataTable td {
+      border: 1px solid #ddd;
+      padding: 6px 10px;
+      text-align: left;
+    }
+
+    .dataTables_length select,
+    .dataTables_filter input {
+      background-color: #fff2e6 !important;
+      color: #333 !important;
+      border: 1px solid var(--fiap) !important;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    .dataTables_paginate a {
+      background-color: #fff2e6 !important;
+      color: var(--fiap) !important;
+      border: 1px solid var(--fiap) !important;
+      padding: 3px 8px;
+      margin: 2px;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    .dataTables_paginate a:hover {
+      background-color: var(--fiap-strong) !important;
+      color: #fff !important;
+    }
+    .dataTables_paginate .current {
+      background-color: var(--fiap) !important;
+      color: #fff !important;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>FIAP 2025</h1>
+  <p class="sublead">Base de datos completa: tabla y CSV</p>
+  <p class="intro">
+    Esta base de datos de FIAP 2025 permite explorar inscripciones con detalle de track, título, marca, agencia, categoría, nivel de premio y país.
+    La tabla se puede filtrar y ordenar, y también está disponible la descarga en CSV.
+  </p>
+
+  <div class="newsletter-box">
+    <h2>Mas info en el Newsletter de<br>Pablo Petovel</h2>
+    <p>Gratis. Powered by Beehiiv.</p>
+    <form action="https://magic.beehiiv.com/v1/522e9063-6442-4cd6-927d-05200c3565bb" method="get" target="_blank">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <br>
+      <button type="submit" class="btn-download">Subscribe</button>
+    </form>
+  </div>
+
+  <a href="/awards/fiap/2025/data/fiap2025.csv" download class="btn-download">Descargar CSV</a>
+
+  <table id="fiapTable" class="display" style="width:100%">
+    <thead>
+      <tr>
+        <th>Track</th>
+        <th>Title</th>
+        <th>Brand</th>
+        <th>Agency</th>
+        <th>Category</th>
+        <th>Award level</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+  </table>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      Papa.parse('/awards/fiap/2025/data/fiap2025.csv', {
+        download: true,
+        header: true,
+        skipEmptyLines: true,
+        complete: function (results) {
+          var data = results.data.map(function(row){ return row; });
+          $('#fiapTable').DataTable({
+            data: data,
+            columns: [
+              { data: 'Track' },
+              { data: 'Title' },
+              { data: 'Brand' },
+              { data: 'Agency' },
+              { data: 'Category' },
+              { data: 'Award level' },
+              { data: 'Country' }
+            ],
+            pageLength: 100,
+            lengthMenu: [100, 500, 1000],
+            scrollX: true
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
