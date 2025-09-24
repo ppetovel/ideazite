@@ -1,13 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_cannes2020.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_cannes2021.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_cannes2022.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_cannes2023.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_cannes2024.xml</loc>
+  </sitemap>
+  <sitemap>
     <loc>https://ideazite.com/sitemaps/sitemap_cannes2025.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://ideazite.com/sitemaps/sitemap_spikes_asia2025.xml</loc>
+    <loc>https://ideazite.com/sitemaps/sitemap_dubai_lynx2020.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_dubai_lynx2021.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_dubai_lynx2022.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_dubai_lynx2023.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_dubai_lynx2024.xml</loc>
   </sitemap>
   <sitemap>
     <loc>https://ideazite.com/sitemaps/sitemap_dubai_lynx2025.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_effie_latam2025.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_eurobest2020.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_eurobest2021.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_eurobest2022.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_eurobest2023.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_eurobest2024.xml</loc>
   </sitemap>
   <sitemap>
     <loc>https://ideazite.com/sitemaps/sitemap_fiap2025.xml</loc>
@@ -16,6 +61,18 @@
     <loc>https://ideazite.com/sitemaps/sitemap_geretyawards2025.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://ideazite.com/sitemaps/sitemap_effie_latam2025.xml</loc>
+    <loc>https://ideazite.com/sitemaps/sitemap_spikes_asia2021.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_spikes_asia2022.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_spikes_asia2023.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_spikes_asia2024.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://ideazite.com/sitemaps/sitemap_spikes_asia2025.xml</loc>
   </sitemap>
 </sitemapindex>
