@@ -11,10 +11,13 @@
   function gtag(){ dataLayer.push(arguments); }
   window.gtag = window.gtag || gtag;
 
-  // Inicializar
+  // Inicializar GA4
   gtag('js', new Date());
+
+  // Configuración con page_path real
   gtag('config', 'G-WBBBSGK7YX', {
     send_page_view: true,
-    transport_type: 'beacon'
+    transport_type: 'beacon',
+    page_path: window.location.pathname // asegura que GA4 registre la URL de cada campaña
   });
 })();
