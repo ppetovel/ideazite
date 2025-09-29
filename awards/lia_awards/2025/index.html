@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LIA Awards 2025 | Ganadores, shortlist y base de datos completa</title>
+  <meta name="description" content="Explora la base de datos LIA Awards 2025 desde Londres: campañas ganadoras, shortlist, agencias creativas y boards. Descarga CSV completo.">
+  <link rel="canonical" href="https://ideazite.com/awards/lia_awards/2025/">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="LIA Awards 2025, Londres, agencias premiadas, shortlist, winners, ganadores, campañas creativas, publicidad, marketing, awards, CSV, boards">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="LIA Awards 2025 | Ganadores, shortlist y base de datos completa">
+  <meta property="og:description" content="Explora todas las entries de Londres 2025 y descárgalas en CSV.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ideazite.com/awards/lia_awards/2025/">
+  <meta property="og:image" content="https://ideazite.com/icons/lia2025.png">
+  <meta property="og:image:alt" content="LIA Awards 2025">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LIA Awards 2025 | Ganadores y base de datos completa">
+  <meta name="twitter:description" content="Explora campañas, agencias y descarga CSV con boards.">
+  <meta name="twitter:image" content="https://ideazite.com/icons/lia2025.png">
+  <meta name="twitter:image:alt" content="LIA Awards 2025">
+
+  <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+
+  <!-- Centralizado -->
+  <script src="/consent/consent-init.js" defer></script>
+  <script src="/analytics/ga-init.js" defer></script>
+  <script src="/ads/ads-init.js" defer></script>
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+  <style>
+    /* ===== Paleta pastel ===== */
+    :root{
+      --text:#2f2f2f;
+      --muted:#616161;
+      --line:#f7f7fa;
+
+      --lila:#cbb8ff;
+      --lila-hover:#b5a1ff;
+      --lila-weak:#e9e0ff;
+
+      --cel:#bfe8ff;
+      --cel-weak:#e9f7ff;
+    }
+
+    body{ margin:0; padding:0; background:#fff; color:var(--text); font:15px/1.55 Arial, sans-serif; text-align:center; }
+    .wrap{ max-width:1000px; margin:0 auto; padding:0 12px 20px; }
+
+    h1{ margin:26px 0 4px; font-size:26px; font-weight:700; color:#222;
+        border-bottom:3px solid var(--lila); display:inline-block; padding-bottom:4px; }
+    .sublead{ font-size:14px; color:#303030; margin:8px 0 10px; }
+    .intro{ max-width:780px; margin:8px auto 16px; font-size:14px; color:#525252; }
+
+    .newsletter-box{ background:hsl(187,79%,85%); border:1px solid var(--line);
+      border-left:4px solid var(--cel); padding:12px 16px; margin:14px auto 18px;
+      max-width:420px; border-radius:8px; }
+    .newsletter-box h2{ font-size:16px; margin:0 0 6px; color:#222; }
+    .newsletter-box p{ font-size:13px; margin:0 0 8px; color:#444; }
+
+    .btn-download{ display:inline-block; background:var(--lila); color:#1b1b1b;
+      padding:8px 14px; margin:14px 0 8px; border:0; border-radius:8px;
+      font-weight:700; font-size:13px; cursor:pointer; text-decoration:none; }
+    .btn-download:hover{ background:var(--lila-hover); }
+
+    table.dataTable{ width:100% !important; border-collapse:collapse; }
+    table.dataTable thead th{ background:var(--lila-weak) !important; color:#2d2d2d !important;
+      border:1px solid var(--line) !important; padding:6px !important; font-size:12px !important;
+      white-space:nowrap; font-weight:600 !important; }
+    table.dataTable tbody tr:nth-child(even){ background:#fcfcfe; }
+    table.dataTable tbody tr:hover{ background:var(--cel-weak); }
+    table.dataTable td{ border:1px solid var(--line); padding:6px 10px; font-size:12px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>LIA Awards 2025</h1>
+    <p class="sublead">Ganadores, shortlist y base de datos desde Londres</p>
+    <p class="intro">
+      Esta base de datos reúne las inscripciones de los LIA Awards 2025 en Londres, con detalles de categoría, título, marca, agencia, subcategoría, país y premio.
+      Un recurso para explorar el talento creativo internacional y descargar el CSV con toda la información.
+    </p>
+
+    <div class="newsletter-box">
+      <h2>Más datos de todos los festivales</h2>
+      <p>Newsletter [Powered by Beehiiv]</p>
+      <form action="https://magic.beehiiv.com/v1/522e9063-6442-4cd6-927d-05200c3565bb" method="get" target="_blank">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <br>
+        <button type="submit" class="btn-download">Subscribe</button>
+      </form>
+    </div>
+
+    <table id="liaTable2025" class="display"></table>
+    <a href="/awards/lia_awards/2025/data/lia2025.csv" download class="btn-download">Download CSV</a>
+  </div>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <script>
+    function buildColumns(fields){
+      return [
+        { data: 'Category', title: 'Category' },
+        { data: 'Title', title: 'Title',
+          render: function(data, type, row){
+            var url = row['Permalink'] || '';
+            return (data && url) ? '<a class="title-link" href="'+url+'" target="_blank">'+data+'</a>' : data;
+          }},
+        { data: 'Brand', title: 'Brand' },
+        { data: 'Agency', title: 'Agency' },
+        { data: 'Sub-Category', title: 'Sub-Category' },
+        { data: 'Country', title: 'Country' },
+        { data: 'Award', title: 'Award' }
+      ];
+    }
+
+    $(document).ready(function(){
+      Papa.parse('/awards/lia_awards/2025/data/lia2025_permalinks.csv', {
+        download:true, header:true, skipEmptyLines:true, encoding:"UTF-8",
+        complete:function(results){
+          var rows = results.data || [];
+          $('#liaTable2025').DataTable({
+            data: rows,
+            columns: buildColumns(),
+            pageLength: 100, lengthMenu: [100,500,1000],
+            scrollX: true, deferRender: true
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -9,7 +9,11 @@ SITEMAPS_DIR = os.path.join(BASE_DIR, "sitemaps")
 os.makedirs(SITEMAPS_DIR, exist_ok=True)
 
 # Buscar todos los CSV que terminan en _permalinks.csv (en subcarpetas)
-csv_files = glob.glob(os.path.join(BASE_DIR, "**", "*_permalinks.csv"), recursive=True)
+csv_files = [
+    f for f in glob.glob(os.path.join(BASE_DIR, "**", "*_permalinks.csv"), recursive=True)
+    if "_clean" not in os.path.basename(f).lower()
+]
+
 
 sitemaps_generated = []
 
