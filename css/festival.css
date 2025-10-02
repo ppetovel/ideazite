@@ -1,0 +1,192 @@
+/* ===== Paleta pastel sin degradés ===== */
+:root{
+  --text:#2f2f2f;
+  --muted:#616161;
+  --line:#f7f7fa;
+
+  --lila:#cbb8ff;
+  --lila-hover:#b5a1ff;
+  --lila-weak:#e9e0ff;
+
+  --cel:#bfe8ff;
+  --cel-weak:#e9f7ff;
+
+  --link:#4e5aa7;
+  --link-hover:#9094b3;
+}
+
+html,body{
+  margin:0; padding:0;
+  background:#fff;
+  color:var(--text);
+  font:15px/1.55 Arial, Helvetica, sans-serif;
+  text-align:center;
+}
+
+a{ color:var(--link); text-decoration:none; }
+a:hover{ color:var(--link-hover); text-decoration:underline; }
+
+.wrap{ max-width:1000px; margin:0 auto; padding:0 12px 20px; }
+
+h1{
+  margin:26px 0 4px;
+  font-size:26px;
+  font-weight:700;
+  color:#222;
+  border-bottom:3px solid var(--lila);
+  display:inline-block;
+  padding-bottom:4px;
+}
+
+.sublead{
+  font-size:14px;
+  color:#303030;
+  margin:8px 0 10px;
+}
+
+.intro{
+  max-width:780px;
+  margin:8px auto 16px;
+  font-size:14px;
+  color:#525252;
+}
+
+.nav-links{ margin:10px 0 12px; font-size:13px; }
+.nav-links a{ margin:0 6px; }
+.nav-links a::after{
+  content:"";
+  display:inline-block;
+  width:6px; height:6px;
+  border-radius:50%;
+  background:var(--cel);
+  margin:0 6px 1px;
+}
+.nav-links a:last-child::after{ display:none; }
+
+.newsletter-box{
+  background:hsl(187, 79%, 85%);
+  border:1px solid var(--line);
+  border-left:4px solid var(--cel);
+  padding:12px 16px;
+  margin:14px auto 18px;
+  max-width:420px;
+  border-radius:8px;
+}
+.newsletter-box h2{ font-size:16px; margin:0 0 6px; color:#222; }
+.newsletter-box p{ font-size:13px; margin:0 0 8px; color:#444; }
+.newsletter-box input[type="email"]{
+  padding:6px 10px;
+  width:68%;
+  font-size:13px;
+  border:1px solid var(--line);
+  border-radius:6px;
+  background:#fff;
+}
+
+.btn-download{
+  display:inline-block;
+  background:var(--lila);
+  color:#1b1b1b;
+  padding:8px 14px;
+  margin:14px 0 8px;
+  border:0;
+  border-radius:8px;
+  font-weight:700;
+  font-size:13px;
+  text-decoration:none;
+  cursor:pointer;
+}
+.btn-download:hover,
+.btn-download:focus{
+  background:var(--lila-hover);
+  color:#1b1b1b;
+  text-decoration:none;
+  outline:0;
+}
+a.btn-download:hover{ color:#1b1b1b; text-decoration:none; }
+
+/* DataTables */
+table.dataTable{
+  width:100% !important;
+  border-collapse:collapse;
+}
+table.dataTable thead th{
+  background:var(--lila-weak) !important;
+  color:#2d2d2d !important;
+  border:1px solid var(--line) !important;
+  padding:6px !important;
+  font-size:12px !important;
+  white-space:nowrap;
+  font-weight:600 !important;
+}
+table.dataTable tbody tr{ border-bottom:1px solid var(--line); }
+table.dataTable tbody tr:nth-child(even){ background:#fcfcfe; }
+table.dataTable tbody tr:hover{ background:var(--cel-weak); }
+table.dataTable td{
+  border:1px solid var(--line);
+  padding:6px 10px;
+  text-align:left;
+  font-size:12px;
+  line-height:1.4;
+}
+
+.dataTables_length select,
+.dataTables_filter input{
+  background:#fff !important;
+  color:var(--text) !important;
+  border:1px solid #bbb !important;
+  padding:6px 8px;
+  border-radius:6px;
+  font-size:12px !important;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.08);
+}
+.dataTables_filter input:focus {
+  border-color: var(--lila-hover) !important;
+  box-shadow: 0 0 3px rgba(181,161,255,0.6);
+  outline: none;
+}
+
+.dataTables_paginate a{
+  background:var(--lila) !important;
+  color:#1b1b1b !important;
+  border:1px solid var(--line) !important;
+  padding:4px 10px; margin:2px;
+  border-radius:8px;
+  text-decoration:none !important;
+  box-shadow:none;
+}
+.dataTables_paginate a:hover,
+.dataTables_paginate a:focus{
+  background:var(--lila-hover) !important;
+  color:#1b1b1b !important;
+  border-color:var(--line) !important;
+  text-decoration:none !important;
+  outline:0;
+}
+.dataTables_paginate .current{
+  background:var(--lila-hover) !important;
+  color:#1b1b1b !important;
+  border-color:var(--line) !important;
+}
+
+.site-footer{
+  margin:18px auto 14px;
+  padding:8px 10px;
+  max-width:920px;
+  border-top:1px solid var(--line);
+  color:#555;
+  font-size:13px;
+  line-height:1.35;
+}
+
+#festivalTable .title-link { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width:600px){
+  html,body{ font-size:14px; }
+  .newsletter-box input[type="email"]{
+    width:100%; box-sizing:border-box;
+  }
+  table.dataTable thead th{ font-size:11px !important; padding:5px !important; }
+  table.dataTable td{ font-size:11px; padding:4px 6px; }
+}
