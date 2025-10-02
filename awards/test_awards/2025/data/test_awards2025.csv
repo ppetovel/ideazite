@@ -1,4 +1,7 @@
-Title,Brand,Agency,Award,Country,Year
-Campaña 1,Marca A,Agencia X,Gold,Argentina,2025
-Campaña 2,Marca B,Agencia Y,Silver,Brasil,2025
-Campaña 3,Marca C,Agencia Z,Bronze,México,2025
+Track,Title,Brand,Agency,Award,Country,Year,Category
+Xxxxxx,Campaña 1,Marca A,Agencia X,Gold,Arg,2024,Xxxxxxx
+Xfffxxxxx,Caffmpaña 1,Marca ADD,Agencia X,Gold,Arg,2024,cccc
+Xxxxffxx,Campfffaña 1,Marca ADS,Agencia X,Gold,Arg,2024
+Xxxffxxx,Caffmpaña 1,Marca FFA,Agencia X,Gold,mArg,2024,opuyrde
+Xxxxxx,Campaña 1,Marca AT,Agencia X,Silver,Arg,2025
+Xxxxxx,Campaña 1,Marca A,Agencia X,Bronze,Arg,2024

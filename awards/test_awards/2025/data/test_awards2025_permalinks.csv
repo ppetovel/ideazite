@@ -1,4 +1,7 @@
-Title,Brand,Agency,Award,Country,Year,Permalink
-Campaña 1,Marca A,Agencia X,Gold,Argentina,2025,/C:/Program Files/Git/awards/test_awards/2025/campaigns/campana-1-marca-a-agencia-x-2025/
-Campaña 2,Marca B,Agencia Y,Silver,Brasil,2025,/C:/Program Files/Git/awards/test_awards/2025/campaigns/campana-2-marca-b-agencia-y-2025/
-Campaña 3,Marca C,Agencia Z,Bronze,México,2025,/C:/Program Files/Git/awards/test_awards/2025/campaigns/campana-3-marca-c-agencia-z-2025/
+Track,Title,Brand,Agency,Award,Country,Year,Category,Permalink
+Xxxxxx,Campaña 1,Marca A,Agencia X,Gold,Arg,2024,Xxxxxxx,/awards/test_awards/2025/campaigns/campana-1-marca-a-agencia-x-2024/
+Xfffxxxxx,Caffmpaña 1,Marca ADD,Agencia X,Gold,Arg,2024,cccc,/awards/test_awards/2025/campaigns/caffmpana-1-marca-add-agencia-x-2024/
+Xxxxffxx,Campfffaña 1,Marca ADS,Agencia X,Gold,Arg,2024,,/awards/test_awards/2025/campaigns/campfffana-1-marca-ads-agencia-x-2024/
+Xxxffxxx,Caffmpaña 1,Marca FFA,Agencia X,Gold,mArg,2024,opuyrde,/awards/test_awards/2025/campaigns/caffmpana-1-marca-ffa-agencia-x-2024/
+Xxxxxx,Campaña 1,Marca AT,Agencia X,Silver,Arg,2025,,/awards/test_awards/2025/campaigns/campana-1-marca-at-agencia-x-2025/
+Xxxxxx,Campaña 1,Marca A,Agencia X,Bronze,Arg,2024,,/awards/test_awards/2025/campaigns/campana-1-marca-a-agencia-x-2024-2/

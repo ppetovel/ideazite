@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Test Awards 2025 | Ganadores y base de datos</title>
-  <meta name="description" content="Explora la base de datos Test Awards 2025: campañas, agencias y descarga CSV.">
+  <meta name="description" content="Explora la base de datos de los Test Awards 2025: campañas ganadoras, shortlist, agencias y boards. Descarga CSV completo.">
   <link rel="canonical" href="https://ideazite.com/awards/test_awards/2025/">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,9 +46,7 @@
     <h1>Test Awards 2025</h1>
     <p class="sublead">Ganadores, shortlist, entries, boards y la base de datos</p>
     <p class="intro">
-      Esta base de datos reúne inscripciones con detalles de track, título, brand, agency, nivel de premio e imagen.
-      Explora campañas destacadas en un festival de prueba.
-      Al final de la tabla, el CSV del festival completo.
+      Esta base de datos reúne inscripciones con detalles de track, título, brand, agency, award e imagen. Explora campañas destacadas en Test Awards 2025. Al final de la tabla, el CSV del festival completo.
     </p>
 
     <!-- Newsletter -->
@@ -76,7 +74,7 @@
     initFestivalTable(
       "/awards/test_awards/2025/data/test_awards2025_permalinks.csv",
       {
-        columns: "Title,Brand,Agency,Award".split(",").filter(c=>c),
+        columns: "Track,Title,Brand,Agency,Award".split(",").filter(c=>c),
         linkColumn: "Title"
       }
     );
