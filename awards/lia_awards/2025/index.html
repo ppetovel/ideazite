@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>LIA Awards 2025 | Ganadores, shortlist y base de datos completa desde Las Vegas</title>
-  <meta name="description" content="Explora la base de datos LIA Awards 2025 desde Las Vegas: campañas ganadoras, shortlist, agencias creativas y boards. Descarga CSV completo.">
+  <title>LIA Awards 2025 | Ganadores y base de datos</title>
+  <meta name="description" content="Explora la base de datos de los LIA Awards 2025: campañas ganadoras, shortlist, agencias y boards. Descarga CSV completo.">
   <link rel="canonical" href="https://ideazite.com/awards/lia_awards/2025/">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="LIA Awards 2025, Las Vegas, agencias premiadas, shortlist, winners, ganadores, campañas creativas, publicidad, marketing, awards, CSV, boards">
+  <meta name="keywords" content="LIA Awards 2025, ganadores, shortlist, campañas, publicidad, marketing, awards, CSV, boards">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="LIA Awards 2025 | Ganadores, shortlist y base de datos completa desde Las Vegas">
-  <meta property="og:description" content="Explora todas las entries del LIA Awards 2025 y descárgalas en CSV. Boards incluidos.">
+  <meta property="og:title" content="LIA Awards 2025 | Ganadores y base de datos">
+  <meta property="og:description" content="Explora todas las campañas y descárgalas en CSV. Boards incluidos.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ideazite.com/awards/lia_awards/2025/">
   <meta property="og:image" content="https://ideazite.com/icons/lia_awards2025.png">
@@ -19,14 +19,14 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="LIA Awards 2025 | Ganadores y base de datos completa">
-  <meta name="twitter:description" content="Explora campañas exitosas del LIA en Las Vegas, agencias y descarga CSV con boards.">
+  <meta name="twitter:title" content="LIA Awards 2025 | Ganadores y base de datos">
+  <meta name="twitter:description" content="Explora campañas, agencias y descarga CSV con boards.">
   <meta name="twitter:image" content="https://ideazite.com/icons/lia_awards2025.png">
   <meta name="twitter:image:alt" content="LIA Awards 2025">
 
   <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
 
-  <!-- Centralizado -->
+  <!-- Scripts globales -->
   <script src="/consent/consent-init.js" defer></script>
   <script src="/analytics/ga-init.js" defer></script>
   <script src="/ads/ads-init.js" defer></script>
@@ -34,63 +34,8 @@
   <!-- DataTables CSS -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 
-  <style>
-  /* ===== Paleta pastel sin degradés ===== */
-  :root{
-    --text:#2f2f2f;
-    --muted:#616161;
-    --line:#f7f7fa;
-    --lila:#cbb8ff;
-    --lila-hover:#b5a1ff;
-    --lila-weak:#e9e0ff;
-    --cel:#bfe8ff;
-    --cel-weak:#e9f7ff;
-    --link:#4e5aa7;
-    --link-hover:#9094b3;
-  }
-  html,body{
-    margin:0; padding:0;
-    background:#fff; color:var(--text);
-    font:15px/1.55 Arial, Helvetica, sans-serif;
-    text-align:center;
-  }
-  a{ color:var(--link); text-decoration:none; }
-  a:hover{ color:var(--link-hover); text-decoration:underline; }
-  .wrap{ max-width:1000px; margin:0 auto; padding:0 12px 20px; }
-  h1{ margin:26px 0 4px; font-size:26px; font-weight:700; color:#222; border-bottom:3px solid var(--lila); display:inline-block; padding-bottom:4px; }
-  .sublead{ font-size:14px; color:#303030; margin:8px 0 10px; }
-  .intro{ max-width:780px; margin:8px auto 16px; font-size:14px; color:#525252; }
-  .nav-links{ margin:10px 0 12px; font-size:13px; }
-  .nav-links a{ margin:0 6px; }
-  .nav-links a::after{ content:""; display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--cel); margin:0 6px 1px; }
-  .nav-links a:last-child::after{ display:none; }
-  .newsletter-box{ background:hsl(187, 79%, 85%); border:1px solid var(--line); border-left:4px solid var(--cel); padding:12px 16px; margin:14px auto 18px; max-width:420px; border-radius:8px; }
-  .newsletter-box h2{ font-size:16px; margin:0 0 6px; color:#222; }
-  .newsletter-box p{ font-size:13px; margin:0 0 8px; color:#444; }
-  .newsletter-box input[type="email"]{ padding:6px 10px; width:68%; font-size:13px; border:1px solid var(--line); border-radius:6px; background:#fff; }
-  .btn-download{ display:inline-block; background:var(--lila); color:#1b1b1b; padding:8px 14px; margin:14px 0 8px; border:0; border-radius:8px; font-weight:700; font-size:13px; text-decoration:none; cursor:pointer; }
-  .btn-download:hover, .btn-download:focus{ background:var(--lila-hover); color:#1b1b1b; text-decoration:none; outline:0; }
-  a.btn-download:hover{ color:#1b1b1b; text-decoration:none; }
-  table.dataTable{ width:100% !important; border-collapse:collapse; }
-  table.dataTable thead th{ background:var(--lila-weak) !important; color:#2d2d2d !important; border:1px solid var(--line) !important; padding:6px !important; font-size:12px !important; white-space:nowrap; font-weight:600 !important; }
-  table.dataTable tbody tr{ border-bottom:1px solid var(--line); }
-  table.dataTable tbody tr:nth-child(even){ background:#fcfcfe; }
-  table.dataTable tbody tr:hover{ background:var(--cel-weak); }
-  table.dataTable td{ border:1px solid var(--line); padding:6px 10px; text-align:left; font-size:12px; line-height:1.4; }
-  .dataTables_length select, .dataTables_filter input{ background:#fff !important; color:var(--text) !important; border:1px solid #bbb !important; padding:6px 8px; border-radius:6px; font-size:12px !important; box-shadow: inset 0 1px 2px rgba(0,0,0,0.08); }
-  .dataTables_filter input:focus { border-color: var(--lila-hover) !important; box-shadow: 0 0 3px rgba(181,161,255,0.6); outline: none; }
-  .dataTables_paginate a{ background:var(--lila) !important; color:#1b1b1b !important; border:1px solid var(--line) !important; padding:4px 10px; margin:2px; border-radius:8px; text-decoration:none !important; box-shadow:none; }
-  .dataTables_paginate a:hover, .dataTables_paginate a:focus{ background:var(--lila-hover) !important; color:#1b1b1b !important; border-color:var(--line) !important; text-decoration:none !important; outline:0; }
-  .dataTables_paginate .current{ background:var(--lila-hover) !important; color:#1b1b1b !important; border-color:var(--line) !important; }
-  .site-footer{ margin:18px auto 14px; padding:8px 10px; max-width:920px; border-top:1px solid var(--line); color:#555; font-size:13px; line-height:1.35; }
-  #liaAwardsTable2025 .title-link { text-decoration: underline; }
-  @media (max-width:600px){
-    html,body{ font-size:14px; }
-    .newsletter-box input[type="email"]{ width:100%; box-sizing:border-box; }
-    table.dataTable thead th{ font-size:11px !important; padding:5px !important; }
-    table.dataTable td{ font-size:11px; padding:4px 6px; }
-  }
-  </style>
+  <!-- CSS común -->
+  <link rel="stylesheet" href="/css/festival.css">
 </head>
 <body>
   <div class="wrap">
@@ -101,22 +46,22 @@
     <h1>LIA Awards 2025</h1>
     <p class="sublead">Ganadores, shortlist, entries, boards y la base de datos</p>
     <p class="intro">
-      Esta base de datos reúne las inscripciones con detalles de track, título, brand, agency, nivel de premio y board o imagen.
-      Explora campañas destacadas y mira qué agencias fueron reconocidas en el festival de Las Vegas. 
-      Al final de la tabla, el CSV del festival completo.
+      Esta base de datos reúne inscripciones con detalles de track, título, brand, agency, award e imagen. Explora campañas destacadas en LIA Awards 2025. Al final de la tabla, el CSV del festival completo.
     </p>
 
+    <!-- Newsletter -->
     <div class="newsletter-box">
       <h2>Más datos de todos los festivales</h2>
       <p>Newsletter [Powered by Beehiiv]</p>
       <form action="https://magic.beehiiv.com/v1/522e9063-6442-4cd6-927d-05200c3565bb" method="get" target="_blank">
-        <input type="email" name="email" placeholder="Enter your email" required>
+        <input type="email" name="email" placeholder="Tu email" required>
         <br>
-        <button type="submit" class="btn-download">Subscribe</button>
+        <button type="submit" class="btn-download">Suscribirse</button>
       </form>
     </div>
 
-    <table id="liaAwardsTable2025" class="display"></table>
+    <!-- Tabla -->
+    <table id="festivalTable" class="display"></table>
     <a href="/awards/lia_awards/2025/data/lia_awards2025.csv" download class="btn-download">Download CSV</a>
   </div>
 
@@ -124,73 +69,15 @@
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="/js/festival-table.js"></script>
   <script>
-  var EXCLUDE = ['festival','year','category','board image','board_image','boardimage','permalink'];
-  function shouldShow(name){ return EXCLUDE.indexOf((name||'').toLowerCase().trim()) === -1; }
-
-  var AWARD_RANK = {
-    "grand prix": 0,
-    "titanium": 1,
-    "titaniuam": 1,
-    "titanum": 1,
-    "gold": 2,
-    "silver": 3,
-    "bronze": 4,
-    "blonze": 4,
-    "shortlist": 5,
-    "shirtlist": 5,
-    "submitted": 6,
-    "submited": 6
-  };
-  function awardRankOf(val){
-    var v = (val || "").toString().trim().toLowerCase();
-    return (v in AWARD_RANK) ? AWARD_RANK[v] : 999;
-  }
-
-  function buildColumns(fields){
-    return fields.filter(shouldShow).map(function(name){
-      var key = (name||'').toLowerCase().trim();
-      if (key === 'title') {
-        return { title: name, data: null, render: function(row){
-          var t = row['Title'] || '';
-          var url = row['Permalink'] || '';
-          return (t && url) ? '<a class="title-link" href="'+url+'" rel="noopener">'+t+'</a>' : t;
-        }};
+    initFestivalTable(
+      "/awards/lia_awards/2025/data/lia_awards2025_permalinks.csv",
+      {
+        columns: "Track,Title,Brand,Agency,Award".split(",").filter(c=>c),
+        linkColumn: "Title"
       }
-      if (key.indexOf('award') !== -1) {
-        return { title: name, data: name, render: function(data, type, row){
-          if (type === 'sort' || type === 'type') {
-            return awardRankOf(data);
-          }
-          return data;
-        }};
-      }
-      return { title: name, data: name };
-    });
-  }
-
-  $(document).ready(function(){
-    Papa.parse('/awards/lia_awards/2025/data/lia_awards2025_permalinks.csv', {
-      download:true, header:true, skipEmptyLines:true,
-      complete:function(results){
-        var rows = results.data || [];
-        var fields = (results.meta && results.meta.fields) ? results.meta.fields : (rows.length ? Object.keys(rows[0]) : []);
-        if(!fields.length) return;
-        var columns = buildColumns(fields);
-        var awardIdx = -1;
-        for (var i = 0; i < columns.length; i++) {
-          var t = (columns[i].title || '').toLowerCase();
-          if (t.indexOf('award') !== -1) { awardIdx = i; break; }
-        }
-        $('#liaAwardsTable2025').DataTable({
-          data: rows, columns: columns,
-          order: (awardIdx !== -1) ? [[awardIdx, 'asc']] : [],
-          pageLength: 100, lengthMenu: [100,500,1000],
-          scrollX: true, deferRender: true
-        });
-      }
-    });
-  });
+    );
   </script>
 
   <!-- Footer -->
