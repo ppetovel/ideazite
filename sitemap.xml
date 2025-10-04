@@ -1,14 +1,2 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Sitemaps de campañas 2025 -->
-  <sitemap>
-    <loc>https://ideazite.com/sitemaps/sitemap_index.xml</loc>
-  </sitemap>
-
-  <!-- Sitemap con secciones principales (2020–2025) -->
-  <sitemap>
-    <loc>https://ideazite.com/sitemaps/sitemap_sections.xml</loc>
-  </sitemap>
-
-</sitemapindex>
+<?xml version='1.0' encoding='utf-8'?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>https://ideazite.com/sitemaps/sitemap_index.xml</loc></sitemap><sitemap><loc>https://ideazite.com/sitemaps/sitemap_sections.xml</loc></sitemap></sitemapindex>
