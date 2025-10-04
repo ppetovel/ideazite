@@ -6,10 +6,12 @@ Y PUEDE TENER OTRAS, FESTIVAL, YEAR, ETCCCCCC. NO IMPORTA EL ORDEN
 CON TITLE SIEMPRE HACE EL LINK
 
 UNA VEZ CON LAS COLUMNAS, SE CIERRA, SE ABRE EL ARCHOVO EN UN SPREADSHEET NUEVO CON IMPORTAR
-EN LA MISMA PAGINA Y SE LO EXPORTA COMO CSV
+EN LA MISMA PAGINA Y SE LO DESCARGA COMO CSV
+
 LISTO
+
 A ESE ARCHIVO SE LO PASA POR PYTHON clean_csv_text.py
 
 python clean_csv_text.py --input test_award2024_sucio.csv --output test_award2024_clean.csv
 
-python clean_csv_text.py --input fiap2023_sucio.csv --output fiap2023_clean.csv
+python clean_csv_text.py --input lia_awards2025_sucio.csv --output lia_awards2025_clean.csv
