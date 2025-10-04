@@ -1,0 +1,18 @@
+1. Ver en qué estado está el repo
+    Parado en la carpeta raíz de tu proyecto (/d/IDEAZITE/WEB IDEAZITE/GITHUB/ideazite):
+git status
+    Esto te va a mostrar qué archivos se modificaron (por ejemplo, tu index.html, CSS, etc.).
+
+2. Agregar los cambios al “staging area”
+    Si querés agregar todos los archivos modificados:
+git add .
+    Si preferís ser selectivo, por ejemplo solo el index de Cannes 2020:
+    git add awards/canneslions/2020/index.html
+
+3. Hacer el commit
+    Guardás los cambios con un mensaje:
+git commit -m "xxxxxx lo que sea que haya cambiado"
+
+4. Subir a GitHub
+    Finalmente empujás los cambios a la rama principal (main):
+git push origin main
