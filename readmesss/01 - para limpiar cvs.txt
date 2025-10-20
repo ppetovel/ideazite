@@ -15,6 +15,6 @@ LISTO
 
 A ESE ARCHIVO SE LO PASA POR PYTHON clean_csv_text.py
 
-python clean_csv_text.py --input test_award2024_sucio.csv --output test_award2024_clean.csv
+python clean_csv_text.py --input clio_awards2025_sucio.csv --output clio_awards2025_clean.csv
 
 python clean_csv_text.py --input luum_awards2024_sucio.csv --output luum_awards2024_clean.csv
