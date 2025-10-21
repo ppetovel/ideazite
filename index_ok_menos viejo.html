@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ideazite | Inspirate en todas las campañas ganadoras en los principales festivales de creatividad, publicidad y marketing del mundo</title>
-  <meta name="description" content="Explora entries, shortlists, agencias y ganadores de Cannes Lions, Eurobest, Gerety Awards, Spikes Asia, Dubai Lynx, Effie Awards Latin America, FIAP, LIA, Luum Awards y muchos más. Boards, videos y descargas CSV.">
+  <meta name="description" content="Explora entries, shortlists, agencias y ganadores de Cannes Lions, Eurobest, Gerety Awards, Spikes Asia, Dubai Lynx, Effie Awards Latin America, FIAP, LIA, Luum Awards, Clio Awards, The Loerie Awards y muchos más. Boards, videos y descargas CSV.">
   <link rel="canonical" href="https://ideazite.com/">
   <link rel="icon" href="/icons/favicon.ico" type="image/x-icon">
-  <meta name="keywords" content="Cannes Lions, Eurobest, Spikes Asia, Gerety Awards, Dubai Lynx, FIAP, LIA, Luum Awards, Effie, entries, shortlists, ganadores, categorías, campañas, awards, publicidad, marketing, ideas, premios, creatividad, CSV, base de datos">
+  <meta name="keywords" content="Cannes Lions, Eurobest, Spikes Asia, Gerety Awards, Dubai Lynx, FIAP, LIA, Luum Awards, Clio Awards, The Loerie Awards, Effie, entries, shortlists, ganadores, categorías, campañas, awards, publicidad, marketing, ideas, premios, creatividad, CSV, base de datos">
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ideazite | Campañas y ganadores de todos los festivales creativos">
-  <meta property="og:description" content="Entries, shortlists, agencias y ganadores de Cannes Lions, Eurobest, Spikes Asia, Dubai Lynx, Effie, FIAP, LIA, Luum y muchos más. Campañas con boards y CSV.">
+  <meta property="og:description" content="Entries, shortlists, agencias y ganadores de Cannes Lions, Eurobest, Spikes Asia, Dubai Lynx, Effie, FIAP, LIA, Luum, Clio y Loerie Awards. Campañas con boards y CSV.">
   <meta property="og:url" content="https://ideazite.com/">
   <meta property="og:image" content="https://ideazite.com/icons/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -42,6 +42,8 @@
       --effie:#c29200;
       --lia:#30eb96;
       --luum:#6a1b9a;
+      --clio:#0055ff; /* Azul Francia */
+      --loerie:#1a1a1a; /* Gris muy oscuro casi negro */
       --bg:#ffffff;
       --text:#1a1a1a;
       --muted:#666;
@@ -175,6 +177,12 @@
     .luum{ background: var(--luum); border-color: var(--luum); }
     .luum:hover{ background: #8e24aa; border-color: #8e24aa; }
 
+    .clio{ background: var(--clio); border-color: var(--clio); }
+    .clio:hover{ background: #1e66ff; border-color: #1e66ff; }
+
+    .loerie{ background: var(--loerie); border-color: var(--loerie); }
+    .loerie:hover{ background: #333333; border-color: #333333; }
+
     footer{
       max-width: var(--maxw);
       margin: 20px auto 40px;
@@ -197,51 +205,19 @@
       padding: 2px 4px;
     }
   </style>
-
-  <!-- JSON-LD: WebSite + CollectionPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "Ideazite",
-        "url": "https://ideazite.com/",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://ideazite.com/?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "CollectionPage",
-        "name": "Bases de datos de festivales de creatividad, publicidad y marketing",
-        "description": "Entries, shortlists, agencias y ganadores de Cannes Lions, Eurobest, Spikes Asia, Dubai Lynx, Effie, FIAP, LIA, Luum y otros, con videos, boards y descargas CSV.",
-        "url": "https://ideazite.com/"
-      }
-    ]
-  }
-  </script>
-
 </head>
 <body>
   <header>
     <picture>
       <source srcset="/icons/ideazite-header-desktop.png" media="(min-width: 768px)">
-      <img
-        src="/icons/ideazite-header-mobile.png"
-        alt="Ideazite, todas las campañas ganadoras en los festivales de creatividad, publicidad y marketing"
-        class="logo"
-        width="1200" height="400"
-        sizes="(min-width: 768px) 100vw, 100vw"
-        fetchpriority="high">
+      <img src="/icons/ideazite-header-mobile.png" alt="Ideazite, todas las campañas ganadoras en los festivales de creatividad, publicidad y marketing" class="logo" width="1200" height="400" sizes="(min-width: 768px) 100vw, 100vw" fetchpriority="high">
     </picture>
   </header>
 
   <main>
     <h1>Creatividad para inspirarse: la <span class="highlight">colección definitiva</span> de los festivales de publicidad y marketing</h1>
     <p class="intro">
-      En Ideazite, toda la infomación de festivales como Cannes Lions, Eurobest, Gerety Awards, Spikes Asia, Dubai Lynx, Effie Awards Latin America, Epica Awards, Business of Design Week, Asian Academy Creative Awards, Summit Awards, Pentawards, Pixel Awards, Guardian Advertising Awards, Young Ones Student Awards, FIAP, LIA Awards, Luum Awards y muchos más.
+      En Ideazite, toda la infomación de festivales como Cannes Lions, Eurobest, Gerety Awards, Spikes Asia, Dubai Lynx, Effie Awards Latin America, Clio Awards, The Loerie Awards, FIAP, LIA Awards, Luum Awards y muchos más.
       <br><br>Cobertura por año, entries, shortlist, medallas y grand prix, con links a videos, image boards y descargas CSV.
     </p>
 
@@ -257,6 +233,8 @@
         <a href="/awards/canneslions/2025/" class="button cannes">Cannes Lions 2025</a>
         <a href="/awards/spikes_asia/2025/" class="button spikes">Spikes Asia 2025</a>
         <a href="/awards/dubai_lynx/2025/" class="button dubai">Dubai Lynx 2025</a>
+        <a href="/awards/clio_awards/2025/" class="button clio">Clio Awards 2025</a>
+        <a href="/awards/the_loerie_awards/2025/" class="button loerie">The Loerie Awards 2025</a>
         <span class="button luum inactive" aria-disabled="true" title="Coming soon">Luum Awards 2025</span>
       </div>
     </section>
