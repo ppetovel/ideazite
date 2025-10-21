@@ -5,6 +5,7 @@ La tabla se muestra siempre así, con el link en Title
 Las otras columnas que se pongan salen en las páginas de cada campaña.
 Si le pones la columna "Board image" y adentro le pones un link, ese link se agrega al final en "View Board"
 Si está vacia, no pone nada
+Las columnas con links se transforman en clicleables 
 
 Este es el bash que se corre primero para generar el csv permalink y las paginas de las campañas
 
@@ -12,7 +13,7 @@ Este es el bash que se corre primero para generar el csv permalink y las paginas
 ▼▼***** OJO HAY QUE CAMBIAR LOS NOMBRES "TEST" Y YEAR POR LOS QUYE CORRESPONDAN ▼▼▼
 
 
-python generate_campaign_pages_05.py \
+python generate_campaign_pages_07.py \
   --csv ./awards/fiap/2025/data/fiap2025.csv \
   --festival "FIAP Awards" \
   --year 2025 \
