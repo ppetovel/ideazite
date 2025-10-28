@@ -1,0 +1,30 @@
+Antes que nada guardar una copia de INDEX, porque ojo, lo modifica
+
+Para agregar un festival que ya existe pero no en ese año
+
+>>> python add_festival.py "Cannes Lions" cannes cannes 2026
+
+Para agregar un festival que NO existe 
+
+>>>  python add_festival.py "AME Awards" ame_awards ame "#004477" "#1166aa" 2025
+
+readme:
+
+1	python add_festival.py	—	Ejecuta el script con Python. Debe estar en la misma carpeta que el archivo index.html.
+
+2	"AME Awards"	con comillas	Nombre visible del festival. Es el texto que aparece dentro del botón, antes del año. Si el nombre tiene espacios, se debe escribir entre comillas.
+
+3	ame_awards	sin comillas	Slug del festival. Es el nombre que se usa en la ruta del enlace (/awards/[slug]/[año]/). Debe coincidir con la carpeta del festival en el sitio.
+
+4	ame	sin comillas	Clase CSS asociada al festival. Define el color del botón. Si el festival ya existe, debe coincidir con una clase que ya esté en el CSS. Si es nuevo, el script crea la variable --ame y las reglas .ame y .ame:hover.
+
+5	"#004477"	con comillas	Color base (en formato HEX). Se aplica como color de fondo del botón cuando el festival es nuevo. Si el festival ya existe, este valor se ignora.
+
+6	"#1166aa"	con comillas	Color hover (en formato HEX). Es el color que se muestra al pasar el mouse por encima del botón. También solo se usa si el festival es nuevo.
+
+7	2025	número	Año en el que se desea agregar el festival. Si ese año ya existe, el botón se agrega dentro de esa sección. Si no existe, el script crea una nueva sección completa.
+
+
+
+
+
