@@ -15,6 +15,6 @@ LISTO
 
 A ESE ARCHIVO SE LO PASA POR PYTHON clean_csv_text.py
 
-python clean_csv_text.py --input effie_argentina2025_sucio.csv --output effie_argentina2025_clean.csv
+python clean_csv_text.py --input luum_awards2025_sucio.csv --output luum_awards2025_clean.csv
 
 python clean_csv_text.py --input the_loerie_awards2025_sucio.csv --output the_loerie_awards2025_clean.csv
