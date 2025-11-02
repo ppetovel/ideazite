@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>El Ojo de Iberoamérica 2025 | Ganadores y base de datos</title>
+  <meta name="description" content="Explora la base de datos de El Ojo de Iberoamérica 2025: campañas ganadoras, shortlist, agencias y boards. Descarga CSV completo.">
+  <link rel="canonical" href="https://ideazite.com/awards/el_ojo/2025/">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="El Ojo de Iberoamérica 2025, ganadores, shortlist, campañas, publicidad, marketing, awards, CSV, boards">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="El Ojo de Iberoamérica 2025 | Ganadores y base de datos">
+  <meta property="og:description" content="Explora todas las campañas y descárgalas en CSV. Boards incluidos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ideazite.com/awards/el_ojo/2025/">
+  <meta property="og:image" content="https://ideazite.com/icons/el_ojo2025.png">
+  <meta property="og:image:alt" content="El Ojo de Iberoamérica 2025">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="El Ojo de Iberoamérica 2025 | Ganadores y base de datos">
+  <meta name="twitter:description" content="Explora campañas, agencias y descarga CSV con boards.">
+  <meta name="twitter:image" content="https://ideazite.com/icons/el_ojo2025.png">
+  <meta name="twitter:image:alt" content="El Ojo de Iberoamérica 2025">
+
+  <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+
+  <!-- Scripts globales -->
+  <script src="/consent/consent-init.js" defer></script>
+  <script src="/analytics/ga-init.js" defer></script>
+  <script src="/ads/ads-init.js" defer></script>
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+  <!-- CSS común -->
+  <link rel="stylesheet" href="/css/festival.css">
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav-links">
+      <a href="https://ideazite.com/">Home</a>
+    </nav>
+
+    <h1>El Ojo de Iberoamérica 2025</h1>
+    <p class="sublead">Ganadores, shortlist, entries, boards y la base de datos</p>
+    <p class="intro">
+      Esta base de datos reúne inscripciones con detalles de track, título, brand, agency, award e imagen. Explora campañas destacadas en El Ojo de Iberoamérica 2025. Al final de la tabla, el CSV del festival completo.
+    </p>
+
+    <!-- Newsletter -->
+    <div class="newsletter-box">
+      <h2>Más datos de todos los festivales</h2>
+      <p>Newsletter [Powered by Beehiiv]</p>
+      <form action="https://magic.beehiiv.com/v1/522e9063-6442-4cd6-927d-05200c3565bb" method="get" target="_blank">
+        <input type="email" name="email" placeholder="Tu email" required>
+        <br>
+        <button type="submit" class="btn-download">Suscribirse</button>
+      </form>
+    </div>
+
+    <!-- Tabla -->
+    <table id="festivalTable" class="display"></table>
+    <a href="/awards/el_ojo/2025/data/el_ojo2025.csv" download class="btn-download">Download CSV</a>
+  </div>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="/js/festival-table.js"></script>
+  <script>
+    initFestivalTable(
+      "/awards/el_ojo/2025/data/el_ojo2025_permalinks.csv",
+      {
+        columns: "Track,Title,Brand,Agency,Award".split(",").filter(c=>c),
+        linkColumn: "Title"
+      }
+    );
+  </script>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+  <script>
+    fetch("/includes/footer.html")
+      .then(r=>r.text())
+      .then(html=>{ document.getElementById("footer-container").innerHTML=html; })
+      .catch(()=>{});
+  </script>
+</body>
+</html>
