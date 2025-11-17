@@ -1,9 +1,14 @@
 Una vez creadas las carpetas del festival, del año y dentro de año data y campaigns, poner el csv dentro de data.
 
-Las columnas que hay que poner son: Track,Title,Brand,Agency,Award 
+Las columnas que hay que poner son: 
+
+Track,Title,Brand,Agency,Award 
+
 La tabla se muestra siempre así, con el link en Title
+
 Las otras columnas que se pongan salen en las páginas de cada campaña.
-Si le pones la columna "Board image" y adentro le pones un link, ese link se agrega al final en "View Board"
+
+Si le pones la columna *Board image* y adentro le pones un link, ese link se agrega al final en "View Board"
 Si está vacia, no pone nada
 Las columnas con links se transforman en clicleables 
 
