@@ -25,5 +25,5 @@ readme:
 
 6	"#1166aa"	con comillas	Color hover (en formato HEX). Es el color que se muestra al pasar el mouse por encima del botón. También solo se usa si el festival es nuevo.
 
-7	2025	número	Año en el que se desea agregar el festival. Si ese año ya existe, el botón se agrega dentro de esa sección. Si no existe, el script crea una nueva sección completa.
+7	2025	número	Año en el que se desea agregar el festival. Si ese año ya existe, el botón se agrega dentro de esa sección. Si no existe, el script crea una nueva sección completa (alg está mal en esto, porque cuando se quiere crear un festival que ya existe en un año nuevo que no hay desde antes, vuelve a pedir color y hover cuando en realidad ya los tiene de los festivales anteriores).
 

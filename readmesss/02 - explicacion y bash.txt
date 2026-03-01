@@ -15,7 +15,7 @@ Las columnas con links se transforman en clicleables
 Este es el bash que se corre primero para generar el csv permalink y las paginas de las campañas
 
 
-▼▼***** OJO HAY QUE CAMBIAR LOS NOMBRES "TEST" Y YEAR POR LOS QUYE CORRESPONDAN ▼▼▼
+▼▼***** OJO HAY QUE CAMBIAR LOS NOMBRES "TEST" Y YEAR POR LOS QUE CORRESPONDAN ▼▼▼
 
 
 python generate_campaign_pages_07.py \
