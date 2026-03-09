@@ -2,6 +2,8 @@ Cada vez que agregues festivales/años:
 
 solo corrés generate_all_sitemaps.py 
 
+python generate_all_sitemaps.py
+
 y subís los cambios a Git. 
 
 Search Console lo detecta en la próxima lectura del sitemap.xml.
