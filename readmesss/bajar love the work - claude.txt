@@ -31,7 +31,12 @@ python -u scraper-LTW-01.py --year 2024 --festival cannes-lions --track film
 
 --track (ahi va el slug)
 
-Eso descarga solo el track film de Cannes Lions 2024 y guarda el resultado en cannes-lions_film2024.csv.
+Eso descarga solo el track film de Cannes Lions 2024 
+Se pueden poner varios tracks
+--track film \
+--track design \
+--track film-craft
+
 
 Los slugs disponibles según el CSV:
 Para cannes-lions: audio-radio, film, outdoor, print-publishing, design, digital-craft, film-craft, industry-craft, creative-b2b, creative-data, direct, media, pr, social-creator, entertainment, outdoor, etc.
@@ -39,4 +44,4 @@ Para eurobest: film, outdoor, design, media, pr, direct, etc.
 Para spikes-asia y dubai-lynx: mismos slugs similares.
 
 Si no sabés el slug exacto, usá dry-run para verlos:
-bashpython -u scraper.py --year 2024 --festival cannes-lions --dry-run
+python -u scraper.py --year 2024 --festival cannes-lions --dry-run

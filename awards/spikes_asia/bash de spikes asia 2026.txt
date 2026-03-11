@@ -1,0 +1,16 @@
+python generate_campaign_pages_07.py \
+  --csv ./awards/spikes_asia/2026/data/spikes_asia2026.csv \
+  --festival "SPIKES ASIA" \
+  --year 2026 \
+  --year-root /awards/spikes_asia/2026/ \
+  --outdir ./awards/spikes_asia/2026/campaigns \
+  --site-base https://ideazite.com \
+  --clean
+
+Este es el bash para generar el index (el texto que hay que modificar es para el SEO, el que sale en la web se genera automáticamente)
+
+python generate_index.py \
+  --festival "SPIKES ASIA" \
+  --slug spikes_asia \
+  --year 2026 \
+  --desc "Explora la base de datos del Spikes Asia 2026: campañas ganadoras, shortlist, agencias y boards. Descarga CSV completo."
