@@ -3,6 +3,7 @@ Antes que nada guardar una copia de INDEX, porque ojo, lo modifica
 Para agregar un festival que ya existe pero no en ese año
 
 >>> python add_festival.py "Cannes Lions" cannes cannes 2026
+>>> python add_festival.py "Clio Awards" clio_awards clio 2026
 
 
 
