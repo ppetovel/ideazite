@@ -1,8 +1,3 @@
-Perfecto 👌, te armo un **README.md** listo para guardar en la raíz del repo (`ideazite/README.md`).
-Ahí tenés explicado cómo usar cada script y ejemplos con diferentes festivales.
-
----
-
 ## `README.md`
 
 ```markdown
@@ -109,8 +104,3 @@ Ejemplo:
 
 ```
 
----
-
-👉 Con esto ya tenés una guía rápida dentro del proyecto.  
-¿Querés que además te prepare un ejemplo de **Windows `.bat`** (para no depender de Git Bash) que funcione igual que el `generate_festival.sh`?
-```
