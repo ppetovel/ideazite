@@ -201,7 +201,7 @@ def generate_pages_and_permalink_csv(csv_path: str, permalink_csv_out: str, clea
             # Generar tabla dinámica con todas las columnas (menos Permalink y Board image)
             table_rows = []
             for col, val in row.items():
-                if col.lower().strip() in ("permalink", "board image"):
+                if col is None or col.lower().strip() in ("permalink", "board image"):
                     continue
 
                 col_name = html_escape(col)
